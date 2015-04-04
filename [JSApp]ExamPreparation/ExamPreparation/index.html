@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="styleBookmarks.css">
+
+</head>
+<body>
+
+<header>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><h2>Bookmarks<span></span></h2></li>
+        <li id="logoutBtn"></li>
+    </ul>
+</header>
+<div id="wrapper">
+    <div class="home">
+        <a href="#" class="loginForm">Login</a>
+        <a href="#" class="registerForm">Register</a>
+    </div>
+
+    <div class="login">
+        <input type="text" id="logAccValue" placeholder="Account name"/>
+        <br/>
+        <input type="password" id="logPassValue" placeholder="Password"/>
+        <br/>
+        <a href="#" id="loginWithValues">Login</a>
+        <a href="#"class="registerForm">or Register</a>
+    </div>
+
+    <div class="register">
+        <input type="text" id="RegAccValue" placeholder="Account name"/>
+        <br/>
+        <input type="password" id="RegPassValue" placeholder="Password"/>
+        <br/>
+        <a href="#" id="registerWithValues">Register</a>
+        <a href="#" class="loginForm">or Login</a>
+    </div>
+
+    <div class="bookmarks">
+        <ul>
+
+        </ul>
+        <input type="text" id="newTitle" placeholder="New Title"/>
+        <input type="url" id="newUrl" placeholder="New URL"/>
+        <a href="#" id="submitNewBookmark">Add</a>
+    </div>
+
+</div>
+<footer><h2>Limited licence i drugi typotii</h2></footer>
+
+<script src="scripts/lib/jquery-2.1.1.js"></script>
+<script src="scripts/lib/jquery.noty.packaged.min.js"></script>
+<script src="scripts/controller.js"></script>
+<script src="scripts/ajax-requester.js"> </script>
+</body>
+</html>

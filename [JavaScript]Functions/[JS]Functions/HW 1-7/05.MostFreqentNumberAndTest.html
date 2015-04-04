@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>05.MostFreqentNumberAndTest</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function that counts how many times given number
+         appears in given array. Write a test function to check if the 
+        function is working correctly.
+
+    </p>
+    <input type="text" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function TestFunc(numberArr,testingNumber) {
+
+            var Length = 1;
+            var start = 0;
+            var maxLength = 1;
+            var maxStart = 0;
+
+            var maxSequense = new Array();
+
+            for (var index = 0; index < numberArr.length - 1; index++) {
+                if (numberArr[index] == numberArr[index + 1]) {
+                    start = numberArr[index];
+                    Length++;
+                }
+                if (numberArr[index] != numberArr[index + 1]) {
+                    Length = 1;
+                }
+                if (Length > maxLength) {
+                    maxStart = start;
+                    maxLength = Length;
+                }
+            }
+            for (var i = 0; i < maxLength; i++) {
+                maxSequense.push(maxStart);
+            }
+            if(maxStart == testingNumber)
+            {
+                jsConsole.writeLine("Work properly");
+            }
+        }
+            function BtnClicked() {
+                var input = document.getElementById("input");
+                var numberArr = new Array();
+                numberArr = input.value.split(',');
+
+                numberArr.sort();
+                var Length = 1;
+                var start = 0;
+                var maxLength = 1;
+                var maxStart = 0;
+
+                var maxSequense = new Array();
+
+                for (var index = 0; index < numberArr.length - 1; index++) {
+                    if (numberArr[index] == numberArr[index + 1]) {
+                        start = numberArr[index];
+                        Length++;
+                    }
+                    if (numberArr[index] != numberArr[index + 1]) {
+                        Length = 1;
+                    }
+                    if (Length > maxLength) {
+                        maxStart = start;
+                        maxLength = Length;
+                    }
+                }
+                for (var i = 0; i < maxLength; i++) {
+                    maxSequense.push(maxStart);
+                }
+
+                jsConsole.writeLine("maxfrequence number is " + maxSequense[0]);
+                jsConsole.writeLine(" times " + maxSequense.length);
+                jsConsole.writeLine();
+
+                TestFunc(numberArr,maxStart);
+            }
+    </script>
+</body>
+</html>

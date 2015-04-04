@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>05.YongestInTheArray</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function that finds the youngest person in a given array 
+        of persons and prints his/hers full name
+        Each person have properties firstname, lastname and age, as shown:
+        var persons = [
+        {firstname : "Gosho", lastname: "Petrov", age: 32},
+        {firstname : "Bay", lastname: "Ivan", age: 81},…];
+
+    </p>
+
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var persons = [
+        { firstname: "Gosho", lastname: "Petrov", age: 36 },
+        { firstname: "Bay", lastname: "Ivan", age: 81 },
+        { firstname: "Todor", lastname: "Minchev", age: 32 },
+        { firstname: "kaco", lastname: "african", age: 65 }];
+
+            persons.sort(function ByAge(a,b) {
+                return a.age - b.age;
+            });
+            jsConsole.writeLine(persons[0].firstname + " " + persons[0].lastname);
+        }
+
+    </script>
+</body>
+</html>

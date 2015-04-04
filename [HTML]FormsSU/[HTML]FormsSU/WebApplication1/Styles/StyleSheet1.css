@@ -1,0 +1,14 @@
+body section {
+  background-color: #ffc0cb;
+  width: 600px;
+  font-family: Arial;
+}
+body section table tr td {
+  text-align: left;
+}
+body section table tr td h1 {
+  text-align: center;
+}
+body section table tr td select {
+  width: 200px;
+}

@@ -1,0 +1,4 @@
+1. Navigate to src folder
+2. Execute 'javac SumTwoNumbers.java'
+3. Execute 'java SumTowNumbers' ( without the '.class')
+4. Program is running in the console.

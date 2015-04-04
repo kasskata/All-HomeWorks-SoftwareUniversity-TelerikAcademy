@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>08.Digit To Initials II</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a script that converts a number in the range [0...999] to a text corresponding to its English pronunciation. Examples:
+        0  'Zero'
+        273  'Two hundred seventy three'
+        400  'Four hundred'
+        501  'Five hundred and one'
+        711  'Seven hundred and eleven'
+    </p>
+    <input type="number" placeholder="Number:" id="first" />
+
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var number = jsConsole.readInteger("#first");
+
+            if (number >= 0 && number <= 999)
+            {
+                var digit = parseInt(number % 10);
+                number = parseInt(number / 10);
+                var tenth = parseInt(number % 10);
+                number /= parseInt(10);
+                var hundred = parseInt(number % 10);
+
+                switch (hundred)
+                {
+                    case 1:
+                        jsConsole.writeLine("One hundred ");
+                        break;
+                    case 2:
+                        jsConsole.writeLine("Two hundred ");
+                        break;
+                    case 3:
+                        jsConsole.writeLine("Three hundred ");
+                        break;
+                    case 4:
+                        jsConsole.writeLine("Four hundred ");
+                        break;
+                    case 5:
+                        jsConsole.writeLine("Five hundred ");
+                        break;
+                    case 6:
+                        jsConsole.writeLine("Six hundred ");
+                        break;
+                    case 7:
+                        jsConsole.writeLine("Seven hundred ");
+                        break;
+                    case 8:
+                        jsConsole.writeLine("Eight hundred ");
+                        break;
+                    case 9:
+                        jsConsole.writeLine("Nine hundred ");
+                        break;
+                    default:
+                        break;
+                }
+
+                switch (tenth)
+                {
+                    case 1:
+                        if (hundred == 0) {
+                            break;
+                        }
+                        else {
+                            Console.writeLine("and ");
+                        }
+                        break;
+                    case 2:
+                        jsConsole.writeLine("twenty ");
+                        break;
+                    case 3:
+                        jsConsole.writeLine("thirty ");
+                        break;
+                    case 4:
+                        jsConsole.writeLine("forty ");
+                        break;
+                    case 5:
+                        jsConsole.writeLine("fifty ");
+                        break;
+                    case 6:
+                        jsConsole.writeLine("sixty ");
+                        break;
+                    case 7:
+                        jsConsole.writeLine("seventy ");
+                        break;
+                    case 8:
+                        jsConsole.writeLine("eighty ");
+                        break;
+                    case 9:
+                        jsConsole.writeLine("ninety ");
+                        break;
+                    case 0:
+                        if (hundred == 0) {
+                            break;
+                        }
+                        else if (digit == 0) {
+                            break;
+                        }
+                        else {
+                            Console.writeLine("and ");
+                        }
+                        break;
+                }
+                switch (digit)
+                {
+                    case 1:
+                        if (tenth == 1) {
+                            jsConsole.writeLine("eleven");
+                        }
+                        else {
+                            jsConsole.writeLine("one");
+                        }
+                        break;
+                    case 2:
+                        if (tenth == 1) {
+                            jsConsole.writeLine("twelve");
+                        }
+                        else {
+                            jsConsole.writeLine("two");
+                        }
+                        break;
+                    case 3:
+                        if (tenth == 1) {
+                            jsConsole.writeLine("thirteen");
+                        }
+                        else {
+                            jsConsole.writeLine("three");
+                        }
+                        break;
+                    case 4:
+                        if (tenth == 1) {
+                            jsConsole.writeLine("fourteen");
+                        }
+                        else {
+                            jsConsole.writeLine("four");
+                        }
+                        break;
+                    case 5:
+                        if (tenth == 1) {
+                            jsConsole.writeLine("fifteen");
+                        }
+                        else {
+                            jsConsole.writeLine("five");
+                        }
+                        break;
+                    case 6:
+                        if (tenth == 1) {
+                            jsConsole.writeLine("sixteen");
+                        }
+                        else {
+                            jsConsole.writeLine("six");
+                        }
+                        break;
+                    case 7:
+                        if (tenth == 1) {
+                            jsConsole.writeLine("seventeen");
+                        }
+                        else {
+                            jsConsole.writeLine("seven");
+                        }
+                        break;
+                    case 8:
+                        if (tenth == 1) {
+                            jsConsole.writeLine("eighteen");
+                        }
+                        else {
+                            jsConsole.writeLine("eight");
+                        }
+                        break;
+                    case 9:
+                        if (tenth == 1)
+                        {
+                            jsConsole.writeLine("nineteen");
+                        }
+                        else
+                        {
+                            jsConsole.writeLine("nine");
+                        }
+                        break;
+                }
+            }
+            jsConsole.writeLine("");
+        }
+    </script>
+</body>
+</html>
+

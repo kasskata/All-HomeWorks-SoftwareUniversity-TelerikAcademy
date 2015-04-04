@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Styles/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <section>
+        <table style="width:400px; height:200px; text-align:center;">
+            <tr>
+                <td colspan="4">
+                    <h1>
+                        <em>FLIGHT ORDER</em>
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"
+                    <em>From</em>
+                <br />
+                    <select name="select a city">
+                        <option value="Sofia">Sofia</option>
+                        <option value="Burgas">Burgas</option>
+                    </select>
+                </td>
+                <td>
+                    <em>To</em>
+                    <br />
+                    <select name="select a city">
+                        <option value="Sofia">Sofia</option>
+                        <option value="Burgas">Burgas</option>
+                    </select>
+                    <br />
+                    <input type="checkbox" /><em>Prefer directs</em>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <em>Departure Date</em>
+                    <br />
+                    <input type="date" placeholder="09.06.2014"/>
+                </td>
+                <td>
+                    <em>Time Interval</em>   
+                    <br />                 <input class="time" type="time" placeholder="00:20" />
+                    <input class="time" type="time" placeholder="5:00" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <em>Return Date</em>
+                    <br />
+                    <input type="date" placeholder="13.06.2014" />
+                </td>
+                <td>
+                    <em>Time Interval</em>
+                    <br />
+                    <input class="time" type="time" placeholder="16:00" />
+                    <input class="time" type="time" placeholder="22:00" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    12+
+                    <input style="width:100px;" type="number" value="0" />
+                </td>
+                <td>
+                    12+
+                    <input style="width:100px;" type="number" value="0" />
+                </td>
+                <td>
+                    12+
+                    <input style="width:100px;" type="number" value="0" />
+                </td>
+                <td>
+                   <em>Choose class</em> 
+                    <br />
+                   <select>
+                       <option>Economy</option>
+                       <option>A</option>
+                       <option>B</option>
+                       <option>E</option>
+                   </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" height="40">
+                    <input type="button" value="Search" style="float:right; height:40px; width:245px;" />
+
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>

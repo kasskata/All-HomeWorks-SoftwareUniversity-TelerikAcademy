@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>03.OcurancesInWord</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function that finds all the occurrences of word in a text
+        The search can case sensitive or case insensitive
+        Use function overloading
+
+    </p>
+    <label >Text:</label>
+    <textarea id="input"></textarea>
+    <label >Word:</label>
+    <input type="text" onchange="BtnClicked()" id="search" />
+    <input type="text" id="case">
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var input = document.getElementById('input')
+                .value
+                .split(' ');
+            var key = document.getElementById('search').value;
+            var isCaseSensitive = document.getElementById('case').value;
+
+            if (isCaseSensitive == String('Y')) {
+                isCaseSensitive = true;
+            }
+            else {
+                isCaseSensitive = false;
+            }
+
+            var count = Number(0);
+            for (var i = 0; i < input.length; i++) {
+                temp = input[i].toLowerCase(); ///!!!
+                if (String(temp) == String(key)) {
+                    count++;
+                }
+            }
+            if (count != 0) {
+                jsConsole.writeLine(count + "times");
+            }
+            else {
+                jsConsole.writeLine("-1");
+            }
+        }
+    </script>
+</body>
+</html>

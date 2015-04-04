@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>02.CorrectBrackets</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a JavaScript function to check if in a given expression the brackets are put correctly.
+        Example of correct expression: ((a+b)/5-d).
+        Example of incorrect expression: )(a+b)).
+
+    </p>
+    <input type="text" placeholder="Number:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var equation = document.getElementById('input').value.split('');
+
+            var count = 0;
+            for (var i = 0; i < equation.length; i++) {
+                if (equation[i]===('(')) {
+                    count++;
+                }
+                if (equation[i] === (')')) {
+                    count--;
+                }
+            }
+            jsConsole.writeLine(equation + "  ==>  ");
+            if (count < 0 || count > 0) {
+                jsConsole.writeLine("Wrong brackets");
+            }
+            else {
+                jsConsole.writeLine("Right brackets");
+            }
+        }
+    </script>
+</body>
+</html>

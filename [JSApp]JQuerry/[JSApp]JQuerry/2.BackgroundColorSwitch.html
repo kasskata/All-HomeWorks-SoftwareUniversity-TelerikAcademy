@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<ul>
+    <li class="birds">Hummingbird</li>
+    <li class="birds">Nightingale</li>
+    <li>Lizard</li>
+    <li class="birds">Eagle</li>
+    <li class="birds">Sparrow</li>
+</ul>
+<script>
+    $(document.body).append($('<input type="text"/>').addClass('input'));
+    $(document.body).append($('<input type="color" value="#aeaeae"/>').addClass('color'));
+    var clas;
+    $(".input").on("keyup",function(){
+        clas = $(".input").val();
+        clas = '.'+clas;
+        console.log(clas);
+        $(clas).css("background-color", $(".color").val()).css('margin','21px 1px 21px 1px');
+    });
+
+</script>
+</body>
+</html>

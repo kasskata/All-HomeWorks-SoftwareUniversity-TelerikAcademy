@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>03.DeepCopyOfAnObjects</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function that makes a deep copy of an object
+        The function should work for both primitive and reference types
+    </p>
+
+    <input type="text" placeholder="Number:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var obj = {
+                point: {
+                    x: -2,
+                    y: 1
+                },
+                point2: {
+                    x: 1,
+                    y: 5
+                }
+            };
+            var number = 8;
+            var numbers = [1, 2, 3, 4, 5];
+
+            var numbersCopy = getCloneOfObject(numbers);
+            for (var i = 0; i < numbers.length; i++) {
+                numbersCopy[i]++;
+                jsConsole.write(numbersCopy[i]);
+            }
+            jsConsole.writeLine();
+            for (var i = 0; i < numbers.length; i++) {
+                jsConsole.write(numbers[i]);
+            }
+            jsConsole.writeLine();
+
+            var numberCopy = getCloneOfObject(number);
+            numberCopy++;
+
+            jsConsole.writeLine(numberCopy);
+            jsConsole.writeLine(number);
+
+
+            var objCopy = getCloneOfObject(obj);
+            objCopy.point.x = 7;
+
+            jsConsole.writeLine(objCopy.point.x);
+            jsConsole.writeLine(obj.point.x);
+
+            function getCloneOfObject(oldObject) {
+                var tempClone = {};
+
+                if (typeof oldObject != "object") {
+                    tempClone = oldObject;
+                }
+
+                if (typeof oldObject == "array") {
+                    for (var arrIndex = 0; arrIndex <= oldArray.length; arrIndex++)
+                        if (typeof (oldArray[arrIndex]) == "object")
+                            tempClone.push(this.getCloneOfObject(oldArray[arrIndex]));
+                        else
+                            tempClone.push(oldArray[arrIndex]);
+                }
+
+                else if (typeof (oldObject) == "object")
+                    for (prop in oldObject)
+                        if (typeof (oldObject[prop]) == "object")
+                            tempClone[prop] = this.getCloneOfObject(oldObject[prop]);
+                        else
+                            tempClone[prop] = oldObject[prop];
+
+                return tempClone;
+            }
+        }
+        //All regards to tankovski "Telerik Akademy"
+        http://blog.imaginea.com/deep-copy-in-javascript/
+    </script>
+</body>
+</html>

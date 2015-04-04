@@ -1,0 +1,43 @@
+body nav {
+  position: relative;
+  color: white;
+  background-color: #234465;
+  font-family: Arial;
+  list-style-type: none;
+  width: 1212px;
+  height: 109px;
+  padding: 0px;
+  margin: 0px;
+}
+body nav input {
+  height: 26px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 230px;
+}
+body nav .Triangle::after {
+  content: "▼";
+}
+body nav .right {
+  position: absolute;
+  right: 30px;
+}
+body nav #logo {
+  float: left;
+  padding: 15px;
+  padding-bottom: 10px;
+}
+body nav ul {
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+}
+body nav ul li {
+  display: inline-block;
+  font-size: 15px;
+  margin-right: 20px;
+}
+body nav .pic {
+  position: relative;
+  top: 11px;
+}

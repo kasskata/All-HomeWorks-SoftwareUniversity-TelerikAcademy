@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>BoolWhenDevide</title>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>Write a boolean expression that checks for given integer if it can be divided (without remainder) by 7 and 5 in the same time.
+    </p>
+    <p>When ready just type "Enter"</p>
+    <input type="number" value="Number:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js">
+    </script>
+    <script>
+        function BtnClicked() {
+            var number = jsConsole.readInteger("#input");
+            var boolean = false;
+
+            if (number % 5 === 0 && number % 7 === 0) {
+                boolean = true;
+            }
+            jsConsole.writeLine(boolean);
+        }
+    </script>
+</body>
+</html>

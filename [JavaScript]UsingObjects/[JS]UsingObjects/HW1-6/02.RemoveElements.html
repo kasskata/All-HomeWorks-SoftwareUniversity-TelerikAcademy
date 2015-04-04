@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>02.RemoveElements</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function that removes all elements with a given value
+       
+        var arr = [1,2,1,4,1,3,4,1,111,3,2,1,"1"];
+        arr.remove(1); //arr = [2,4,3,4,111,3,2,"1"];
+
+        Attach it to the array type
+        Read about prototype and how to attach methods
+
+    </p>
+    <input type="text" placeholder="Number:" id="input" />
+    <input type="text" placeholder="Number:" id="element" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var numberArr = document.getElementById('input')
+                .value
+                .split(',');
+
+            var element = jsConsole.readInteger("#element");
+
+            numberArr.remove = function(element) {
+                for (var i = 0; i < numberArr.length; i++) {
+                    if (parseInt(numberArr[i]) === element) {
+                        numberArr.splice(i, 1);
+                    }
+                }
+            };
+            numberArr.remove(element);
+            jsConsole.writeLine(numberArr.join(', '));
+        }
+    </script>
+</body>
+</html>

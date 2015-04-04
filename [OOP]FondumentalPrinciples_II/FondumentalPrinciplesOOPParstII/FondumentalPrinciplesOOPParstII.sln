@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Shape", "01.Shape\01.Shape.csproj", "{CF1B3C9A-2002-4AAB-9A5F-37A00714FEFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.BankManagment", "BankManagment\02.BankManagment.csproj", "{729265B1-93DB-490A-88D1-3C70AB45952D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.ExceptionList", "03.ExceptionList\03.ExceptionList.csproj", "{ED099E45-54CC-4714-A4ED-A10A7CECFFAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF1B3C9A-2002-4AAB-9A5F-37A00714FEFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1B3C9A-2002-4AAB-9A5F-37A00714FEFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1B3C9A-2002-4AAB-9A5F-37A00714FEFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1B3C9A-2002-4AAB-9A5F-37A00714FEFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{729265B1-93DB-490A-88D1-3C70AB45952D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{729265B1-93DB-490A-88D1-3C70AB45952D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{729265B1-93DB-490A-88D1-3C70AB45952D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{729265B1-93DB-490A-88D1-3C70AB45952D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED099E45-54CC-4714-A4ED-A10A7CECFFAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED099E45-54CC-4714-A4ED-A10A7CECFFAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED099E45-54CC-4714-A4ED-A10A7CECFFAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED099E45-54CC-4714-A4ED-A10A7CECFFAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

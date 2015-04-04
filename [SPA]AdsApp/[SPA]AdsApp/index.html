@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="libs/bootstrap.css" rel="stylesheet">
+</head>
+
+<body style="padding:20px; padding-top:50px;" data-ng-app="adsApp" ng-controller="Main">
+<header>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/home">SoftUni Ads</a>
+        </div>
+        <div class="navbar-collapse navbar-responsive-collapse collapse in" aria-expanded="true">
+
+            <ul class="nav navbar-nav navbar-right col-md-6">
+                <form class="navbar-form navbar-left">
+                    <input type="text" class="form-control col-md-2" placeholder="Username">
+                </form>
+                <form class="navbar-form navbar-left">
+                    <input type="text" class="form-control col-md-2" placeholder="Password">
+                </form>
+                <li><a href="#/login">Login</a></li>
+                <li><a href="#/register">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section id="wrapper">
+    <div ng-view></div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="libs/angular.js"></script>
+<script type="text/javascript" src="libs/angular-route.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/controllers/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>Trapezoid's Area</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write an expression that calculates trapezoid's area by given sides a and b and height h.
+    </p>
+    <input type="number" placeholder="Number:" onchange="BtnClicked()" id="a" />
+    <input type="number" placeholder="Number:" onchange="BtnClicked()" id="b" />
+    <input type="number" placeholder="Number:" onchange="BtnClicked()" id="h" />
+    
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var a = jsConsole.readInteger("#a");
+            var b = jsConsole.readInteger("#b");
+            var h = jsConsole.readInteger("#h");
+            var area = (a + b) * h / 2;
+
+            jsConsole.writeLine("( " + a + " + " + b + " ) * " + h + " / 2 = " + area);
+        }
+    </script>
+</body>
+</html>

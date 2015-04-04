@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>04.CaseRandoming</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        You are given a text. Write a function that changes the text in all regions:
+        
+        &lt;upcase&gt;text&lt;/upcase&gt; to uppercase.
+        &lt;lowcase&gt;text&lt;/lowcase&gt; to lowercase
+        &lt;mixcase&gt;text&lt;/mixcase&gt; to mix casing(random)
+        We are &lt;mixcase&gt;living&lt;/mixcase&gt; in a &lt;upcase&gt;yellow submarine&lt;/upcase&gt;.
+      We &lt;mixcase&gt;don't&lt;/mixcase&gt; have &lt;lowcase&gt;anything&lt;/lowcase&gt; else.
+
+     We are &lt;mixcase&gt;living&lt;/mixcase&gt; in a &lt;upcase&gt;yellow submarine&lt;/upcase&gt;. 
+     We &lt;mixcase&gt;don't&lt;/mixcase&gt; have &lt;lowcase&gt;anything&lt;/lowcase&gt; else.
+
+        The expected result:
+        We are LiVinG in a YELLOW SUBMARINE. We dOn'T have anything else.
+
+        Regions can be nested
+
+    </p>
+    <input type="text" placeholder="Number:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var text = document.getElementById('input').value;
+            var objInBrackets = new String(text);
+            objInBrackets = doMixCase(objInBrackets);
+            objInBrackets = doUpcase(objInBrackets);
+            objInBrackets = doLowCase(objInBrackets);
+            jsConsole.writeLine(objInBrackets);
+
+            function doUpcase(text) {
+                var indexStart = text.indexOf("<upcase>");
+                while (indexStart > -1) {
+                    var insedeText = text.substring(indexStart + 8, text.indexOf("</upcase>", indexStart));
+                    var upperText = insedeText.toUpperCase();
+                    text = text.replace(insedeText, upperText);
+                    indexStart = text.indexOf("<upcase>", indexStart + 1);
+                }
+                return text;
+            }
+
+            function doMixCase(text) {
+                var indexStart = text.indexOf("<mixcase>");
+                while (indexStart > -1) {
+                    var insedeText = text.substring(indexStart + 9, text.indexOf("</mixcase>", indexStart));
+                    var mixedText = new String(insedeText);
+                    for (var i = 0; i < mixedText.length; i++) {
+                        if (i % 2 == 0) {
+                            mixedText = mixedText.replace(mixedText[i], mixedText[i].toUpperCase());
+                        } else {
+                            mixedText = mixedText.replace(mixedText[i], mixedText[i].toLowerCase());
+                        }
+                    }
+                    text = text.replace(insedeText, mixedText);
+                    indexStart = text.indexOf("<mixcase>", indexStart + 1);
+                }
+                return text;
+            }
+
+            function doLowCase(text) {
+                var indexStart = text.indexOf("<lowcase>");
+                while (indexStart > -1) {
+                    var insedeText = text.substring(indexStart + 9, text.indexOf("</lowcase>", indexStart));
+                    var lowerText = insedeText.toLowerCase();
+                    text = text.replace(insedeText, lowerText);
+                    indexStart = text.indexOf("<lowcase>", indexStart + 1);
+                }
+                return text;
+            }
+        }
+    </script>
+</body>
+</html>

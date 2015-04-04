@@ -1,0 +1,84 @@
+﻿//Font for Header(remove if you like)
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+body {
+    background-image: url('background.png');
+    color: #d7e5ee;
+    //Constraint
+    font-family: Arial, Helvetica, sans-serif;
+
+    .wrapper {
+        margin: 50px auto;
+        background-color: #333333;
+        padding: 20px;
+        //Constraint
+        width: 750px;
+        height: 320px;
+
+        & > h4 {
+            //Font for Header(remove if you like)
+            font-family: 'Lobster', cursive;
+            text-align: center;
+            background-color: #679966;
+            height: 40px;
+            vertical-align: baseline;
+            line-height: 40px;
+            font-size: 27px;
+        }
+
+        section {
+            display: inline-block;
+            background-color: #232323;
+            //Constraint
+            width: 352.5px;
+            height:216px;
+
+            & > span {
+                text-align: center;
+                font-size: 60px;
+                margin: 15px 0 10px 40%;
+            }
+
+            & > div {
+                text-align: center;
+                margin: 10px;
+            }
+        }
+
+        form {
+            display: inline-block;
+            position: relative;
+            top: -30px;
+             //Constraints
+            width: 352.5px;
+            height:216px;
+
+            .input-group {
+                margin: 20px 5%;
+
+                & > span {
+                    background-color: #679966;
+                    border-color: #679966;
+                }
+            }
+
+            & > h4 {
+                text-align: center;
+            }
+
+            button {
+                width: 318px;
+                margin: auto 5%;
+                background-color: #232323;
+                border-color: #232323;
+                color: #d7e5ee;
+
+                &:hover {
+                    background-color: #679966;
+                    border-color: #679966;
+                    color: #d7e5ee;
+                }
+            }
+        }
+    }
+}

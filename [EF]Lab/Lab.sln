@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geography", "Geography\Geography.csproj", "{B1A16980-63F0-4874-A936-2EA4E51670AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToJson", "ToJson\ToJson.csproj", "{BDE3F7ED-3BF9-43A4-AF4B-AB797052631A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Export-Monasteries-as-XML", "03.Export-Monasteries-as-XML\03.Export-Monasteries-as-XML.csproj", "{2BF89145-3768-450F-9214-6EB0AB296763}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1A16980-63F0-4874-A936-2EA4E51670AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A16980-63F0-4874-A936-2EA4E51670AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A16980-63F0-4874-A936-2EA4E51670AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A16980-63F0-4874-A936-2EA4E51670AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE3F7ED-3BF9-43A4-AF4B-AB797052631A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE3F7ED-3BF9-43A4-AF4B-AB797052631A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE3F7ED-3BF9-43A4-AF4B-AB797052631A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE3F7ED-3BF9-43A4-AF4B-AB797052631A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BF89145-3768-450F-9214-6EB0AB296763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BF89145-3768-450F-9214-6EB0AB296763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BF89145-3768-450F-9214-6EB0AB296763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BF89145-3768-450F-9214-6EB0AB296763}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

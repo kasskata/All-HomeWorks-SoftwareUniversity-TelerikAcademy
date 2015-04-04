@@ -1,0 +1,132 @@
+body {
+  position: relative;
+  background-image: url("../colorfuldotsonblack.png");
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+body li {
+  list-style-type: none;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+body a:visited {
+  color: grey;
+}
+body header {
+  background: #ff0000;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #ff0000 0%, #ff0000 35%, #ff0000 35%, #41ff28 36%, #00c100 36%, #00d60a 70%, #3033ff 71%, #1000ff 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ff0000), color-stop(35%, #ff0000), color-stop(35%, #ff0000), color-stop(36%, #41ff28), color-stop(36%, #00c100), color-stop(70%, #00d60a), color-stop(71%, #3033ff), color-stop(100%, #1000ff));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #ff0000 0%, #ff0000 35%, #ff0000 35%, #41ff28 36%, #00c100 36%, #00d60a 70%, #3033ff 71%, #1000ff 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #ff0000 0%, #ff0000 35%, #ff0000 35%, #41ff28 36%, #00c100 36%, #00d60a 70%, #3033ff 71%, #1000ff 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #ff0000 0%, #ff0000 35%, #ff0000 35%, #41ff28 36%, #00c100 36%, #00d60a 70%, #3033ff 71%, #1000ff 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #ff0000 0%, #ff0000 35%, #ff0000 35%, #41ff28 36%, #00c100 36%, #00d60a 70%, #3033ff 71%, #1000ff 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0000', endColorstr='#1000ff', GradientType=1);
+  /* IE6-9 */
+  color: #ffff00;
+  font-family: Arial;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}
+body aside > nav > header {
+  background: rgba(182, 182, 182, 0);
+  text-decoration: underline;
+  color: black;
+  font-size: 20px;
+}
+body article,
+body aside {
+  background-color: rgba(230, 230, 230, 0.79);
+  border-radius: 10px;
+  width: 69%;
+  float: right;
+  padding: 5px;
+  margin: 5px;
+  margin-right: 20px;
+}
+body aside {
+  float: left;
+  width: 300px;
+}
+body aside header {
+  width: auto;
+}
+body aside nav {
+  position: relative;
+  left: -30px;
+  width: 300px;
+}
+body aside nav ul li {
+  border-radius: 10px;
+  font-size: 27px;
+}
+body aside nav ul li:before {
+  content: url("../tick_circle.png");
+}
+body aside nav ul li:hover {
+  color: white;
+  background: red;
+}
+body aside nav ul li:nth-child(2):hover {
+  background: #ffa500;
+}
+body aside nav ul li:nth-child(3):hover {
+  background: #ffff00;
+}
+body aside nav ul li:nth-child(4):hover {
+  background: #008000;
+}
+body aside nav ul li:nth-child(5):hover {
+  background: #0000ff;
+}
+body aside nav ul li:nth-child(6):hover {
+  background: #800080;
+}
+body header {
+  padding: 5px;
+  background-color: red;
+  border-radius: 10px;
+}
+#webColors,
+#webSafeColors,
+#RGB,
+#RGBA,
+#\#HSLHSV,
+#\#lorem {
+  text-align: left;
+  font-size: 20px;
+  color: white;
+  background: red;
+  width: auto;
+}
+body > section > article > div::first-letter {
+  font-size: 40px;
+  font-style: italic;
+}
+#webSafeColors {
+  color: black;
+  background: #ffa500;
+}
+#RGB {
+  color: black;
+  background: #ffff00;
+}
+#RGBA {
+  background: #008000;
+}
+#\#HSLHSV {
+  background: #0000ff;
+}
+#\#lorem {
+  background: #800080;
+}

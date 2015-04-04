@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Thirth Digit</title>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write an expression that checks for given integer if its third digit (right-to-left) is 7. E. g. 1732 > true.
+    </p>
+    <input type="number" placeholder="Number:" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var number =(jsConsole.readInteger("input"));
+            var thirth = parseInt(number / 100);
+            jsConsole.writeLine(thirth % 10 == 7 ? "It's seven indeed" : "It's not");
+        }
+    </script>
+</body>
+</html>

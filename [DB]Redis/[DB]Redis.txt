@@ -1,0 +1,32 @@
+0)flushall
+1)sadd authors:usernames gosho pesho tosho
+2)smembers authors:usernames
+3)hset authors:gosho name Georgi Peshev
+  hset authors:gosho age 52
+  hset authors:gosho email Pesho-Gandalfa@abv.bg
+  hset authors:gosho phone 0889945213
+  hset authors:pesho name Pesho Georgiev
+  hset authors:pesho age 28
+  hset authors:pesho email a2@abv.bg
+  hset authors:pesho phone 0888888888
+  hset authors:tosho name Tosho Toshev
+  hset authors:tosho age 23
+  hset authors:tosho email 123Tosho-Maistora@ab.bg
+  hset authors:tosho phone 08999 999 999
+4)set ads:count 3
+5)hset ad:1 title Sell Fixie - 700$
+  hset ad:1 description Fixed-gear bicycle
+  hset ad:1 location Sofia
+  hset ad:1 date 22/02/2015
+  hset ad:1 author pepo
+  hset ad:2 title Car - BMW M5
+  hset ad:2 description Cool car for only 50000$
+  hset ad:2 location Plovdiv
+  hset ad:2 date 22/01/2015
+  hset ad:2 author Tosho
+  hset ad:3 title Apartment for sell
+  hset ad:3 description apartment - only 150000$
+  hset ad:3 location Burgas
+  hset ad:3 date 28/02/2015
+  hset ad:3 author gosho
+ 

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>06.NeighborsIsBigger</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function that checks if the element at given position in given array of integers is bigger than its two neighbors (when such exist).
+
+    </p>
+
+    <input type="text" id="input" />
+    <input type="text" onchange="BtnClicked()" id="position" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var input = document.getElementById("input");
+            var numberArr = input.value.split(',');
+           // numberArr = input.value.split(',');
+
+            var position = document.getElementById("position")
+                .value;
+
+            numberArr.unshift(0);
+            numberArr.push(0);
+
+            if (0 <= position && position <= numberArr.length - 1)//i just push the arr and need acurance will be inside
+            {
+                position++;
+                if (numberArr[position - 1] < numberArr[position] && numberArr[position + 1] < numberArr[position]) {
+                    jsConsole.writeLine(numberArr[position - 1] + "<" + numberArr[position] + ">" + numberArr[position + 1]);
+                }
+                else
+                {
+                    jsConsole.writeLine(numberArr[position - 1] +' '+ numberArr[position] + ' ' + numberArr[position + 1]);
+
+                }
+            } 
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+﻿/* RESET */
+ul, li, button, input {
+    margin: 0;
+    padding: 0;
+    border-radius:2px;
+    list-style:none;
+    height: 24px;
+    width: 37px;
+}
+body {
+    background-color:black;
+    font-family:Arial;
+    height: 532px;
+    width: 601px;
+}
+nav li::first-letter{
+    text-decoration:underline;
+}
+body nav{
+    background-image:url(CalculatorBackground.png);
+    border:1px solid #c7ccdd;
+    word-spacing:10px;
+}
+body nav ul{
+    font-size:15px;
+    color:black;
+    width:600px;
+    display:inline-block;    
+}
+body nav ul li {
+display:inline-block;   
+margin-top:5px; 
+margin-left:5px;
+}
+section{
+     border:1px solid #c7ccdd;
+     height:524px;
+     width:600px;
+    background-color:#d9e4f1;
+}
+header{
+    background-image:url(HeaderImg.png);
+    font-family:Consolas;
+    font-size:20px;
+    text-align:right;
+    line-height:10px;
+    margin:15px;
+    margin-bottom:5px;
+    border:1px solid #c7ccdd;
+    border-radius:5px;
+    height:72px;
+}
+header h2{
+    margin:10px;
+    margin-top:45px;
+    font-weight:100;
+}
+section.BinaryOrder {
+    font-family:Consolas;
+    font-size:13px;
+    border-radius:5px;
+    text-align:center;
+    height:70px;
+    width:auto;
+    margin:15px;
+    margin-top:6px;
+    margin-bottom:15px;
+    color:#365882;
+    font-weight:500;
+}
+section.BinaryOrder table{
+    margin-left: 15px;
+    width: 551px;
+}
+section.Buttons{
+    width:568px;
+    height:120px;
+    margin-left:15px;
+}
+section.NumericSystems{
+    border-radius:5px;
+    width:130px;
+    height:149px;
+    font-size:15px;
+    color:#365882;
+    position:relative;
+    top:-8px;
+    left: 14px;
+    margin-bottom:6px;
+}
+section .NumericSystems input{
+    width:16px;
+    margin-left:8px;
+    margin-bottom:10px;
+    font-size:large;
+}
+
+div.TableButtons{
+    width:442px;
+    height:118px;
+    position:relative;
+    top: 206px;
+    left: 155px;
+    font-size:22px;
+    font-family:Consolas;
+    color:#5e799c;
+}
+div.TableButtons table{
+    border-spacing:6px;
+    position:absolute;
+    font-weight:400;
+}
+div.TableButtons table tbody tr td{
+    border:1px solid #c7ccdd;
+    border-radius:5px;
+    text-align:center;
+    text-decoration:double;
+    background-image: url(ButtonImage.png);
+}
+div.TableButtons table tbody tr td:hover{
+    background-image:url(ButtonHover.png);
+    border-color:#e6dc83;
+}
+div.TableButtons table tbody tr td.NotAButton{
+    background-image:none;
+    border-color:#c7ccdd;
+}
+

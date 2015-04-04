@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calculate Rectangle</title>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write an expression that calculates rectangle’s area by given width and height.
+    </p>
+    <input type="number" placeholder="Height" id="height" />
+    <input type="number" placeholder="Width" id="width" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+
+            var height = jsConsole.readFloat("#height");
+            var width = jsConsole.readFloat("#width");
+
+            jsConsole.writeLine(height * width ? height * width : "Can't calculate!");
+        }
+    </script>
+</body>
+</html>

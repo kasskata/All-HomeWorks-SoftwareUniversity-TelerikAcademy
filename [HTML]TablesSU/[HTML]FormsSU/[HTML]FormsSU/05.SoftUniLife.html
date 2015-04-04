@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        input {
+            font-size:40px;
+            color:blue;
+            font-weight:500;
+        }
+        .double{
+            width:200px;
+            height:90px;
+        }
+        .single {
+            width:90px;
+            height:90px;
+            font-size:17px;
+        }
+        tr td {
+            width: 99px;
+            height: 99px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" width="400" height="600">
+        <tr>
+            <td colspan="4">
+                <input type="button" value="SoftUni" style="width: 410px; height: 90px;" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+               <input class="double" type="button" value="Google"/>
+            </td>
+            <td colspan="2">
+                <input class="double" type="button" value="Github" />
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <input class="single" type="button" onclick="URL()" value="FB" />
+            </td>
+            <td>
+                <input class="single" type="button" value="GMail" />
+            </td>
+            <td>
+                <input class="single" type="button" value="YouTube" />
+            </td>
+            <td>
+                <input class="single" type="button" value="WoW" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Food" style="width:100px;height:200px;" />
+            </td>
+            <td colspan="2">
+                <input type="button" value="Game" style="width:200px;height:200px;"/>
+            </td>
+            <td>
+                <table border="1">
+                    <tr>
+                        <td>
+                            <input class="single" type="button" value="Social Life" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="single" type="button" value="Sleep" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input class="single" type="button" value="Beer" style="width:300px;height:100px;" />
+
+            </td>
+            <td>
+                <input class="single" type="button" value="WC" />
+
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

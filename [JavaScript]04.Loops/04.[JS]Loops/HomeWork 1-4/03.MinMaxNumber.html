@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>03.MinMaxNumber</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a script that finds the max and min number from a sequence of numbers
+    </p>
+    <input type="text" placeholder="Number:" id="input" />
+    <a href="#" onclick="BtnClicked()">Check</a>
+    <div id="js-console">
+    </div>
+    <div class="emoticon center emo-160 itwasntme" data-align="center" data-emoticon-name="itwasntme" data-mode="animated" data-size="160" style="background-image: url(https://apps.skypeassets.com/static/1.101/skype.login/images/emoticons/animated/160/itwasntme_160.png); background-position: 50% -8800px;"></div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var input = document.getElementById("input");
+            var numberArr = new Array();
+            numberArr = input.value.split(' ');
+
+            var max = 0;
+            var min = Number.MAX_VALUE;
+            for (var i = 0; i < numberArr.length; i++) {
+
+                if (max <= parseInt(numberArr[i])) {
+                    max = parseInt(numberArr[i]);
+                }
+                if (min >= parseInt(numberArr[i])) {
+                    min = parseInt(numberArr[i]);
+                }
+            }
+            jsConsole.writeLine("min " + min);
+            jsConsole.writeLine("max " + max);
+            //OR
+
+            //Stupid JavaScript want parse on all vars!!!STUPIDity
+            //5 hours later i see the true! :(
+            var sortedParsedArr = parseInt(numberArr.sort());
+
+            max = numberArr[numberArr.length - 1];
+            min = numberArr[0];
+
+            jsConsole.writeLine("min " + min);
+            jsConsole.writeLine("max " + max);
+        }
+        
+    </script>
+</body>
+</html>

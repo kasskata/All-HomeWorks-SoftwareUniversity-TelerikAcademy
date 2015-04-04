@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>09.EmailAdressExtractor</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function for extracting all email addresses from given text.
+        All substrings that match the format &lt;identifier&gt;@&lt;host&gt;&hellip;&lt;domain&gt; should be
+        recognized as emails. Return the emails as array of strings.
+
+
+    </p>
+    <input type="text" placeholder="Number:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var text = "Here are some emails asen.asenov@abv.bg and may be some more mails anreiKirev@gmail.bg ";
+            jsConsole.writeLine(text);
+            var emailArr = [];
+            var index = text.indexOf("@");
+            while (index > -1) {
+                if (text[index - 1] != " " && text[index + 1] != " ") {
+                    var identifier = text.substring(text.lastIndexOf(" ", index - 1), index);
+                    var host = text.substring(index + 1, text.indexOf(".", index + 1));
+                    var domain = text.substring(text.indexOf(".", index + 1) + 1, text.indexOf(" ", text.indexOf(".", index + 1) + 1));
+                    var email = identifier + "@" + host + "." + domain;
+                    emailArr.push(email);
+                    index = text.indexOf("@", index + 1);
+                }
+            }
+            for (var mails in emailArr) {
+                jsConsole.writeLine(emailArr[mails]);
+            }
+
+        }
+    </script>
+</body>
+</html>

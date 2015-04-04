@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        .demo-transition{
+            width:100px;
+            height:100px;
+            background-color:tomato;
+            vertical-align:middle;
+            text-align:center;
+        }
+        .demo-transition:hover{
+           -webkit-transition: width 5s; /* For Safari 3.1 to 6.0 */
+           width:300px;
+           transition: width 5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-transition">Transform Width(100px to 300px) for 5sec</div>
+</body>
+</html>

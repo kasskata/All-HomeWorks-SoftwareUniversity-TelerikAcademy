@@ -1,0 +1,45 @@
+body {
+  font-size: 14px;
+  font-family: Tahoma, sans-serif; }
+  body a {
+    text-decoration: none;
+    color: black; }
+  body ul li {
+    list-style-type: none; }
+  body #wrapper {
+    width: 968px;
+    height: 528px;
+    position: relative; }
+    body #wrapper #archive ul {
+      position: absolute;
+      font-size: 10px;
+      top: -24px;
+      right: 0; }
+      body #wrapper #archive ul li {
+        display: inline-block;
+        color: black;
+        padding-left: 10px; }
+    body #wrapper #header {
+      margin-top: 20px;
+      margin-left: -1px;
+      color: white;
+      background-image: url(http://localhost:40784/problem1/images/topnav_divider.png);
+      position: relative; }
+      body #wrapper #header h1 {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        float: right; }
+      body #wrapper #header #nav ul li {
+        display: inline-block;
+        padding: 10px;
+        font-size: 18px;
+        margin: 10px;
+        margin-left: 5px; }
+        body #wrapper #header #nav ul li a {
+          color: white; }
+          body #wrapper #header #nav ul li a:first-letter {
+            font: capital; }
+    body #wrapper #content h1 {
+      font-size: 24px; }
+

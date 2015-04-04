@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>08.AHrefToURLTag</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a JavaScript function that replaces in a HTML document given as string all the tags &lt;
+        a href=&quot;&hellip;&quot;&gt;&hellip;&lt;/a&gt; with corresponding tags [URL=&hellip;]&hellip;/URL].
+         Sample HTML fragment:
+        &lt;p&gt;Please visit &lt;a href=&quot;http://academy.telerik. com&quot;&gt;our site&lt;/a&gt; to choose a
+         training course. Also visit &lt;a href=&quot;www.devbg.org&quot;&gt;our forum&lt;/a&gt; to discuss the courses.&lt;/p&gt;
+
+        &lt;p&gt;Please visit [URL=http://academy.telerik. com]our site[/URL] to choose a training course.
+         Also visit [URL=www.devbg.org]our forum[/URL] to discuss the courses.&lt;/p&gt;
+
+    </p>
+    <input type="text" placeholder="text:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var text = document.getElementById('input').value;
+
+            text.replace("<a href=\"", "[URL=");
+            text = text.replace("\">", "]");
+            text = text.replace("</a>", "[/URL]");
+
+            jsConsole.writeLine(text);
+        }
+    </script>
+</body>
+</html>

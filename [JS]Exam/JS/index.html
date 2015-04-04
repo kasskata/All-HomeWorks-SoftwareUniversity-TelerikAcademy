@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Phonebook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header id="header">Phonebook<span></span></header>
+
+<!-- Left sidebar menu -->
+<ul id="menu">
+    <li><a href="#" class="link">Home</a></li>
+    <li><a href="#" class="link">Phonebook</a></li>
+    <li><a href="#" class="submitNewPhone">Add Phone</a></li>
+    <li><a href="#" class="link">Edit Profile</a></li>
+    <li><a href="#" id="logoutBtn">Logout</a></li>
+</ul>
+
+<!-- Main screen placeholder -->
+<main id="wrapper">
+
+    <!-- Welcome screen -->
+    <div class="dialog-box" id="wellcome-screen">
+        <h1>Welcome</h1>
+        <a href="#" class="button">Login</a>
+        <a href="#" class="button">Register</a>
+    </div>
+
+    <br/>
+
+    <!-- Registration screen -->
+    <div id="register-form" class="dialog-box">
+        <h1>Register</h1>
+
+        <p>
+            <label for="username">Username:</label>
+            <input type="text" id="RegAccValue"/>
+        </p>
+
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" id="RegPassValue"/>
+        </p>
+
+        <p>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="RegFullName"/>
+        </p>
+
+        <p class="buttons">
+            <a href="#" class="button">Register</a>
+            <a href="#" class="link">Login</a>
+        </p>
+    </div>
+
+    <br/>
+
+    <!-- Login screen -->
+    <div id="login-form" class="dialog-box">
+        <h1>Login</h1>
+
+        <p>
+            <label for="username">Username:</label>
+            <input type="text" id="log-username"/>
+        </p>
+
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" id="log-password"/>
+        </p>
+
+        <p class="buttons">
+            <a href="#" class="button">Login</a>
+            <a href="#" class="link">Register</a>
+
+        <p>
+    </div>
+
+    <br/>
+
+    <!-- User home screen -->
+    <div id="home" class="dialog-box">
+        <h1>Welcome, FirstName LastName (username)</h1>
+
+        <p>Please use the navigation menu on the left.</p>
+    </div>
+
+    <br/>
+
+    <!-- Phonebook screen -->
+    <table id="phones">
+
+    </table>
+    <p><a href="#" class="button">Add Phone</a></p>
+
+    <br/>
+
+    <!-- Add phone screen -->
+    <div id="add-phone-form" class="dialog-box">
+        <h1>Add Phone</h1>
+
+        <p>
+            <label for="personName">Name:</label>
+            <input type="text" id="add-personName">
+        </p>
+
+        <p>
+            <label for="phoneNumber">Number:</label>
+            <input type="text" id="add-phoneNumber">
+        </p>
+
+        <p class="buttons">
+            <a href="#" class="button">Add</a>
+            <a href="#" class="button">Cancel</a>
+        </p>
+    </div>
+
+    <br/>
+
+    <!-- Edit phone screen -->
+    <div id="edit-phone-form" class="dialog-box">
+        <h1>Edit Phone</h1>
+
+        <p>
+            <label for="personName">Name:</label>
+            <input type="text" id="edit-personName" value="Peter Norton">
+        </p>
+
+        <p>
+            <label for="phoneNumber">Number:</label>
+            <input type="text" id="edit-phoneNumber" value="+1 855 344 567">
+        </p>
+
+        <p class="buttons">
+            <a href="#" class="button">Edit</a>
+            <a href="#" class="button">Cancel</a>
+        </p>
+    </div>
+
+    <br/>
+
+    <!-- Delete phone screen -->
+    <div id="delete-phone-form" class="dialog-box">
+        <h1>Confirm Delete Phone?</h1>
+
+        <p>
+            <label for="personName">Name:</label>
+            <input type="text" id="personName" value="Peter Norton" disabled="disabled">
+        </p>
+
+        <p>
+            <label for="phoneNumber">Number:</label>
+            <input type="text" id="phoneNumber" value="+1 855 344 567" disabled="disabled">
+        </p>
+
+        <p class="buttons">
+            <a href="#" class="button">Delete</a>
+            <a href="#" class="button">Cancel</a>
+        </p>
+    </div>
+
+    <br/>
+
+    <!-- Edit user profile screen -->
+    <div id="edit-profile-form" class="dialog-box">
+        <h1>Edit Profile</h1>
+
+        <p>
+            <label for="ChangeUsername">Username:</label>
+            <input type="text" id="ChangeUsername" placeholder="New name">
+        </p>
+
+        <p>
+            <label for="ChangePassword">Password:</label>
+            <input type="password" id="ChangePassword">
+        </p>
+
+        <p>
+            <label for="ChangeFullName">Full Name:</label>
+            <input type="text" id="ChangeFullName" placeholder="New full name">
+        </p>
+
+        <p class="buttons">
+            <a href="#" class="button">Edit</a>
+            <a href="#" class="button">Cancel</a>
+        </p>
+    </div>
+</main>
+<footer id="footer">&copy; 2014 by Software University Foundation, No Rights Reserved</footer>
+
+<script src="scripts/lib/jquery-2.1.1.js"></script>
+<script src="scripts/lib/jquery.noty.packaged.min.js"></script>
+<script src="scripts/ajax-requester.js"></script>
+<script src="scripts/controller.js"></script>
+</body>
+
+</html>

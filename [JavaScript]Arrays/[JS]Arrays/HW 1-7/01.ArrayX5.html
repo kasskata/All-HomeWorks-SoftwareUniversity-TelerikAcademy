@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>01.ArrayX5</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a script that allocates array of 20 integers and initializes
+        each element by its index multiplied by 5. Print the obtained array on the console.
+    </p>
+    <button id="Btn" onclick="BtnClicked()">Go!</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+
+            for (var i = 0; i < 20; i++) {
+                jsConsole.writeLine(i + " * 5 = " + parseInt(i) * 5);
+            }
+        }
+    </script>
+</body>
+</html>

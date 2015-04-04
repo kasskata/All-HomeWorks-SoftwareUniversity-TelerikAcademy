@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JS-Console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>	
+    <script src="../JS-Console/js-console.js"></script>
+    <script>
+            //FLOAT INT BOOL ARRAY
+            var intigers = 125214124;
+            var floats = 1.123;
+            var Arr = [1, 2.3456, '7890'];
+            var boolean = [true, false];
+            //OBJECTS
+            var order = "pizza";
+            function Get(menuItem) {
+                if (menuItem == "pizza") {
+                    console.log("Have " + menuItem + ".");
+                }
+            }
+            var tempОrder = { OrderIs: Get("pizza"), type: "To much peperony", size: 30 };
+            //STRING
+            var string = "string literal!";
+            var undifined;
+            var nullable = null;
+
+            jsConsole.writeLine("integers: " + intigers);
+            jsConsole.writeLine("float: " + floats);
+            jsConsole.writeLine("Arrays: " + Arr);
+            jsConsole.writeLine("Boolean: " + boolean);
+            jsConsole.writeLine("Objects: " + tempОrder);
+            jsConsole.writeLine("Strings: " + string.toString());
+            jsConsole.writeLine("undefine object: " + undifined);
+            jsConsole.writeLine("nullable: " + nullable);
+    </script>
+</body>
+</html>

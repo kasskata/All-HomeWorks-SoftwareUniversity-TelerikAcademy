@@ -1,0 +1,73 @@
+body section {
+  width: 1215px;
+  height: 441px;
+  padding-left: 10px;
+  padding-top: 10px;
+  background-color: #00923e;
+  font-family: sans-serif;
+}
+body section table {
+  width: 1200px;
+  height: 430px;
+  text-align: center;
+  border-spacing: 0;
+}
+body section table th {
+    font-size:24px;
+  background-color: #f8c711;
+  font-weight:900;
+  border: 1px black solid;
+  height: 40px;
+}
+body section table th:last-child {
+  border-top-right-radius: 10px;
+}
+body section table th:first-child {
+  border-top-left-radius: 10px;
+}
+body section table tr {
+  height: 40px;
+}
+body section table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+body section table tr:nth-child(even) {
+  background-color: #c8c8c8;
+}
+body section table td {
+  border: 1px solid black;
+}
+body section table td img {
+  margin: 5px;
+  position: relative;
+  top: 10px;
+}
+body section table button {
+  background-color: red;
+  border-radius: 30px;
+  color: white;
+  width: 40px;
+  height: 40px;
+  outline-width: 0;
+}
+body .green {
+  background-color: #008000;
+}
+body > section > table > tbody > tr:nth-child(5) > td:first-child{
+    border-bottom-left-radius:10px;
+}
+body > section > table > tbody > tr:nth-child(5) > td:last-child {
+    border-bottom-right-radius:10px;
+}
+body > section > table > tbody > tr > td:nth-child(3){
+    text-align:left;
+}
+body > section > table > tbody > tr > td:nth-child(1){
+    text-align:right;
+}
+body > section > table > tbody > tr > td:nth-child(5){
+    text-align:right;
+}
+body > section > table > tbody > tr > td:nth-child(7){
+    text-align:left;
+}

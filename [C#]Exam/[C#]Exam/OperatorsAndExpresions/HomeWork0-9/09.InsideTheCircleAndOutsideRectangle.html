@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>...</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write an expression that checks for given point (x, y) if it is within the circle K( (1,1), 3) and out of the rectangle R(top=1, left=-1, width=6, height=2).
+    </p>
+    <input type="number" placeholder="Number:" onchange="BtnClicked()" id="x" />
+    <input type="number" placeholder="Number:" onchange="BtnClicked()" id="y" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var X = jsConsole.readInteger("#x");
+            var Y = jsConsole.readInteger("#y");
+            var inCircle = ((X - 1) * (X - 1) + (Y - 1) * (Y - 1)) <= 9;
+            var outRectangle = ((-1 <= X) && (X <= 5) && (-1 <= Y) && (Y <= 1));
+
+            jsConsole.writeLine("In circle: " + inCircle + ". And out of rectangle: " + outRectangle + ".");
+        }
+    </script>
+</body>
+</html>

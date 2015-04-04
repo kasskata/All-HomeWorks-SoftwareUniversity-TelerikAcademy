@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>07.FirstBiggerThanNeighbors</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function that returns the index of the first element in array that is bigger than its neighbors, or -1, if there’s no such element.
+        Use the function from the previous exercise.
+
+    </p>
+    <input type="text" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var input = document.getElementById("input");
+            var numberArr = input.value.split(',');
+            // numberArr = input.value.split(',');
+            var count = 0;
+            numberArr.unshift(0);
+            numberArr.push(0);
+
+            position++;
+            for (var position = 0; position < numberArr.length; position++) {
+                if (0 <= position && position <= numberArr.length - 1)//i just push the arr and need acurance will be inside
+                {
+                    
+                    if (numberArr[position - 1] < numberArr[position] && numberArr[position + 1] < numberArr[position]) {
+                        return jsConsole.writeLine(numberArr[position - 1] + "<" + numberArr[position] + ">" + numberArr[position + 1]);
+                        break;
+                    }
+                    else
+                    {
+                        count++;
+                        if (count == numberArr.length-2)
+                        {
+                            jsConsole.writeLine("Dont have");
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\FootballDb\bin\Debug\FootballDb.dll.config
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\FootballDb\bin\Debug\FootballDb.dll
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\FootballDb\bin\Debug\FootballDb.pdb
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\FootballDb\bin\Debug\EntityFramework.dll
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\FootballDb\bin\Debug\EntityFramework.SqlServer.dll
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\FootballDb\bin\Debug\EntityFramework.xml
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\FootballDb\bin\Debug\EntityFramework.SqlServer.xml
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\FootballDb\obj\Debug\FootballDb.csprojResolveAssemblyReference.cache
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\FootballDb\obj\Debug\FootballDb.dll
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\FootballDb\obj\Debug\FootballDb.pdb

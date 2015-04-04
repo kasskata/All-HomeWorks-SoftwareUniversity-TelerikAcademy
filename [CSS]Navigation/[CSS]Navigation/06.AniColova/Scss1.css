@@ -1,0 +1,46 @@
+body {
+  font-family: Arial;
+  color: lightgrey;
+  list-style-type: none;
+  background-color: #1e3741; }
+  body a {
+    text-decoration: none;
+    color: lightgrey; }
+  body nav ul li {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    margin: -2px;
+    background-color: #4b5f67;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    line-height: 30px; }
+    body nav ul li section {
+      display: none; }
+    body nav ul li:hover {
+      background-color: #1e3741; }
+      body nav ul li:hover section {
+        line-height: 30px;
+        vertical-align: middle;
+        display: block;
+        position: absolute;
+        top: 31px;
+        left: -40px; }
+        body nav ul li:hover section ul li {
+          width: 300px;
+          height: 80px;
+          color: lightgrey;
+          border-bottom: 1px solid lightgrey;
+          border-top: 1px solid lightgrey;
+          background: #1e3741; }
+          body nav ul li:hover section ul li:hover {
+            color: white;
+            background-color: #00968c; }
+    body nav ul li iframe {
+      position: absolute;
+      left: 339px;
+      top: 0px;
+      width: 500px;
+      height: 390px; }
+

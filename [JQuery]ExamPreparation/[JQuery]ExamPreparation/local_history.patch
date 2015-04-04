@@ -1,0 +1,17 @@
+Index: scripts/controller.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- scripts/controller.js	(revision )
++++ scripts/controller.js	(revision )
+@@ -48,7 +48,7 @@
+             else {
+                  user = JSON.parse(sessionStorage['currentUser']);
+             }
+-            ajaxRequester.get(user.sessionToken, 'where={"url":"asd"}', onLoadSuccess, onLoadFailed);
++            ajaxRequester.get(user.sessionToken, null, onLoadSuccess, onLoadFailed);
+ 
+             $('body > header > ul > li:nth-child(2) > h2 > span').text('-' + user.username + '');
+             $('#logoutBtn').append($('<a href="#">Logout</a>'));
+\ No newline at end of file

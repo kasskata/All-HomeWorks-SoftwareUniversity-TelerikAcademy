@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+
+<ul class="main">
+    <li>
+        Hi
+    </li>
+    <li>
+        Johny
+    </li>
+</ul>
+
+<script>
+    $(document).ready(function (e) {
+        (function ($) {
+            $.fn.appendTreeElements = function (value) {
+
+                var $this = $(this);
+                for (var i = 0; i < value; i++) {
+
+                    $this.append($('<li/>')
+                            .append($('<a href="#"/>').text('text'))
+                            .append($('<span/>').text('Li-' + i))
+                            .addClass('Li ' + i));
+                }
+                $this.contents().unwrap().wrap('<ul/>');
+
+                $('a').click(hideTag());
+
+                function hideTag() {
+                    $('span').hide(1000);
+                    return false;
+                }
+
+                return $this;
+            }
+        }(jQuery));
+
+        $(".main :nth-child(2)").appendTreeElements(4);
+        $(".Li-1").appendTreeElements(3);
+    });
+
+</script>
+</body>
+</html>

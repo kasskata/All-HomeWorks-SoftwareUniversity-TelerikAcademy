@@ -1,0 +1,58 @@
+body
+{
+	font-size: 14px;
+	font-family: Tahoma, sans-serif;
+	a{
+		text-decoration:none;
+		color:black;
+	}
+	ul li{
+	list-style-type:none;
+	}
+	#wrapper{
+		width:968px;
+		height:528px;
+		position:relative;
+		#archive ul {
+			position:absolute;
+			font-size:10px;
+			top:-24px;
+			right:0;
+			li{
+				display:inline-block;
+				color:black;	
+				padding-left:10px;
+			}
+		}
+		#header{ 
+		margin-top:20px;
+		margin-left:-1px;
+		color:white;
+		background-image:url(http://localhost:40784/problem1/images/topnav_divider.png);
+		position:relative;
+			h1{
+			position:absolute;
+			top:0px;
+			right:0px;
+			float:right;
+			}
+			#nav ul li{
+				
+				display:inline-block;
+				padding:10px;
+				font-size:18px;
+				margin:10px;
+				margin-left:5px;
+				a{
+					&:first-letter{
+					font:capital;
+					}
+					color:white;
+				}
+			}
+		}
+		#content h1{
+			font-size:24px;
+		}
+	}
+}

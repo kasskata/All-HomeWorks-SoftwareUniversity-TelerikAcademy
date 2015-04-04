@@ -1,0 +1,131 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--Create a poll system. The system should contain the following items:
+•	A few questions with 4 possible answers for each question.
+•	A timer, which starts counting down from 5 minutes once the page is loaded.
+•	A submit button for submitting the selected answers.
+Implement the following functionality:
+•	If the user exits the page by accident before submission, his answers should be reloaded from storage.
+•	If the user has already completed the poll (successfully submitted), his result should be displayed.
+•	Save every question's answer in storage. When the presses the 'submit' button, the timer stops, and shows the user his result and his errors.
+-->
+    <script src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<ul>
+    <li id="question"></li>
+    <ul>
+        <li id="answer0"><a href="#"></a></li>
+        <li id="answer1"><a href="#"></a></li>
+        <li id="answer2"><a href="#"></a></li>
+    </ul>
+</ul>
+
+<script>
+    $(function () {
+        createCookie("session",123,0.5);
+        var score = 0;
+        var lvl = 0;
+        var correct = 0;
+        localStorage.setItem('score', score);
+        localStorage.setItem('level', lvl);
+        var questions = [];
+        questions[0] = {Question: 'Bridgekeeper: What... is your name?', Answer: ["My name is Sir Lancelot of Camelot", "I am Troller", "I love this.GetShit()"], correct: 0};
+        questions[1] = {Question: 'Bridgekeeper: What... is your quest?', Answer: ["To seek the Holy Grail.", "I am Troller, and going to сечи трески", "To f*ck your.GetShit()"], correct: 0};
+        questions[2] = {Question: 'Bridgekeeper: What... is the capital of Assyria?', Answer: ["I don't know that.", "I am Troller, and dont know!", 'I love this.SetShit("Aššur")'], correct: 2};
+
+        localStorage.setItem('question0', JSON.stringify(questions[0]));
+        localStorage.setItem('question1', JSON.stringify(questions[1]));
+        localStorage.setItem('question2', JSON.stringify(questions[2]));
+        localStorage.setItem('question3', JSON.stringify(questions[3]));
+
+        if(readCookie("session")){
+            LoadQuestion();
+        }
+        else{
+            alert("Times Up!");
+        }
+
+        function LoadQuestion() {
+            var currentQuestion = $('<span/>').text(JSON.parse(localStorage.getItem('question' + lvl + ''))['Question']);
+            $('#question').empty().append(currentQuestion);
+            var answers = JSON.parse(localStorage.getItem('question' + lvl + ''))['Answer'];
+            $('#answer0 > a').empty().append(answers[0]);
+            $('#answer1 > a').empty().append(answers[1]);
+            $('#answer2 > a').empty().append(answers[2]);
+            correct = JSON.parse(localStorage.getItem('question' + lvl + ''))['correct'];
+
+            for (var i = 0; i < 3; i++) {
+                if (correct == i) {
+                    $('#answer' + correct + '').click(function () {
+                        i = 0;
+                        score += 50;
+                        localStorage.setItem('score', score);
+                        if (lvl > 3) {
+                            alert("Bridgekeeper: Go on. Off you go. "+localStorage.getItem('score'));
+                        }
+                        else {
+                            lvl += 1;
+                            localStorage.setItem('level', lvl);
+                            if(readCookie("session")){
+                                LoadQuestion();
+                            }
+                            else{
+                                alert("Times Up!");
+                            }
+                        }
+                    });
+                }
+                else {
+                    $('#answer' + i + ' > a').click(function () {
+                        alert("Wrong answer.Score-=100;");
+                        score -= 100;
+                        localStorage.setItem('score', score);
+                        lowLevel();
+                        localStorage.setItem('level', lvl);
+                        LoadQuestion();
+                    });
+                }
+
+            }
+        }
+
+        function lowLevel() {
+            if (lvl - 1 < 0) {
+                lvl = 0;
+            }
+            else
+                lvl -= 1;
+        }
+
+        function createCookie(name,value,days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime()+(days*60*1000));
+                var expires = "; expires="+date.toGMTString();
+            }
+            else var expires = "";
+            document.cookie = name+"="+value+expires+"; path=/";
+        }
+
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+
+        function eraseCookie(name) {
+            createCookie(name,"",-1);
+        }
+    });
+</script>
+</body>
+</html>

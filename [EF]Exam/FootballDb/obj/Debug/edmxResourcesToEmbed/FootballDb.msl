@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FootballModelStoreContainer" CdmEntityContainer="FootballEntities">
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="FootballModel.Country">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="Population" ColumnName="Population" />
+          <ScalarProperty Name="AreaSqKm" ColumnName="AreaSqKm" />
+          <ScalarProperty Name="Capital" ColumnName="Capital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InternationalMatches">
+      <EntityTypeMapping TypeName="FootballModel.InternationalMatch">
+        <MappingFragment StoreEntitySet="InternationalMatches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HomeCountryCode" ColumnName="HomeCountryCode" />
+          <ScalarProperty Name="AwayCountryCode" ColumnName="AwayCountryCode" />
+          <ScalarProperty Name="HomeGoals" ColumnName="HomeGoals" />
+          <ScalarProperty Name="AwayGoals" ColumnName="AwayGoals" />
+          <ScalarProperty Name="MatchDate" ColumnName="MatchDate" />
+          <ScalarProperty Name="LeagueId" ColumnName="LeagueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Leagues">
+      <EntityTypeMapping TypeName="FootballModel.League">
+        <MappingFragment StoreEntitySet="Leagues">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LeagueName" ColumnName="LeagueName" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamMatches">
+      <EntityTypeMapping TypeName="FootballModel.TeamMatch">
+        <MappingFragment StoreEntitySet="TeamMatches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HomeTeamId" ColumnName="HomeTeamId" />
+          <ScalarProperty Name="AwayTeamId" ColumnName="AwayTeamId" />
+          <ScalarProperty Name="HomeGoals" ColumnName="HomeGoals" />
+          <ScalarProperty Name="AwayGoals" ColumnName="AwayGoals" />
+          <ScalarProperty Name="MatchDate" ColumnName="MatchDate" />
+          <ScalarProperty Name="LeagueId" ColumnName="LeagueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="FootballModel.Team">
+        <MappingFragment StoreEntitySet="Teams">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Leagues_Teams" TypeName="FootballModel.Leagues_Teams" StoreEntitySet="Leagues_Teams">
+      <EndProperty Name="Leagues">
+        <ScalarProperty Name="Id" ColumnName="LeagueId" />
+      </EndProperty>
+      <EndProperty Name="Teams">
+        <ScalarProperty Name="Id" ColumnName="TeamId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>06.QuadraticEquation</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a script that enters the coefficients a, b and c of a quadratic equation
+        a*x2 + b*x + c = 0
+        and calculates and prints its real roots. Note that quadratic equations may have 0, 1 or 2 real roots.
+
+    </p>
+    <input type="number" placeholder="Number:" id="first" />
+    <input type="number" placeholder="Number:" id="second" />
+    <input type="number" placeholder="Number:" id="thirth" />
+
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var a = jsConsole.readInteger("#first");
+            var b = jsConsole.readInteger("#second");
+            var c = jsConsole.readInteger("#thirth");
+
+            var d = Math.sqrt((b * b) - (4 * a * c));
+            var xPlus = ((-b) + d) / (2 * a);
+            var xMinus = ((-b) - d) / (2 * a);
+
+            if (a == 0) {
+                jsConsole.writeLine("not a valid number");
+            }
+
+            if (d < 0) {
+                jsConsole.writeLine("dont have roots");
+            }
+            else if (d === 0) {
+                jsConsole.writeLine("have 1 root x= " + ((-b) / (2 * a)));
+            }
+            else {
+                jsConsole.writeLine("have 2 roots x = " + xPlus);
+                jsConsole.writeLine("x= " + xMinus);
+            }
+        }
+    </script>
+</body>
+</html>

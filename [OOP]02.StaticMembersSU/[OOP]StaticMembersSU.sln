@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01.Geometry3D", "P01.Point3D\P01.Geometry3D.csproj", "{DAACC16C-44DE-4A7B-BE11-9CED1F54810A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Namespaces", "Namespaces\06.Namespaces.csproj", "{12DC5A49-FDA2-4F2D-9D7B-5A9DD1962F70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.ElementBuilder", "04.ElementBuilder\04.ElementBuilder.csproj", "{A5F8A12B-3684-4776-A366-73C99D8CCC8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAACC16C-44DE-4A7B-BE11-9CED1F54810A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAACC16C-44DE-4A7B-BE11-9CED1F54810A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAACC16C-44DE-4A7B-BE11-9CED1F54810A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAACC16C-44DE-4A7B-BE11-9CED1F54810A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12DC5A49-FDA2-4F2D-9D7B-5A9DD1962F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12DC5A49-FDA2-4F2D-9D7B-5A9DD1962F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12DC5A49-FDA2-4F2D-9D7B-5A9DD1962F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12DC5A49-FDA2-4F2D-9D7B-5A9DD1962F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5F8A12B-3684-4776-A366-73C99D8CCC8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F8A12B-3684-4776-A366-73C99D8CCC8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F8A12B-3684-4776-A366-73C99D8CCC8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F8A12B-3684-4776-A366-73C99D8CCC8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

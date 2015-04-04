@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="../angular.js"></script>
+    <script src="app.js"></script>
+    <script src="01.ControllerStudent.js"></script>
+</head>
+<body ng-mouse="studentApp" ng-controller="ControllerStudent">
+<h2>01.PrintStudent</h2>
+<ul>
+    <li ng="student in students">
+        <strong>Name:</strong>{{student.name}}
+        <strong>Photo:</strong><img src="{{student.photo}}"/>
+        <strong>Grade:</strong>{{student.grade}}
+        <strong>School:</strong>{{student.school}}
+        <strong>Teacher:</strong>{{student.teacher}}
+        <strong>:</strong>{{student.name}}
+    </li>
+</ul>
+<h2>Problem 2. Bind Image Source to Text Box</h2>
+<input type="url" ng-model="img" placeholder="Place URL Here"/>
+<img ng-src="{{img}}"/>
+</body>
+</html>
+Exaples:
+        <br/>
+http://magik70.files.wordpress.com/2014/09/softuni-logo.png
+        <br/>
+http://katla.softuni-friends.org/images/LogoInFrame.png

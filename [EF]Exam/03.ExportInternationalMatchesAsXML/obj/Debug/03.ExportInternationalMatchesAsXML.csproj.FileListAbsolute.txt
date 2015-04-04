@@ -1,0 +1,1 @@
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\03.ExportInternationalMatchesAsXML\bin\Debug\03.ExportInternationalMatchesAsXML.exe.config

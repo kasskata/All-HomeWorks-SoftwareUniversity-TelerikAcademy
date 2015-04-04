@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>03.Substr</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a JavaScript function that finds how many times a substring is contained in a given text (perform case insensitive search).
+        Example: The target substring is "in". The text is as follows:
+
+        We are living in an yellow submarine. We don't have anything else.
+         Inside the submarine is very tight. So we are drinking all the day. We will
+         move out of it in 5 days.
+        The result is: 9.
+
+    </p>
+    <input type="text" placeholder="Text" id="input" />
+    <input type="text" placeholder="Search" id="search" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var text = document.getElementById('input').value;
+            var search = document.getElementById('search').value;
+            var lenght = search.length;
+            var count = 0;
+            for (var i = 0; i < text.length; i++) {
+                if ((text.substr(i, lenght).toLowerCase()) === search) {
+                    count++;
+                }
+            }
+            jsConsole.writeLine(search + ' is founded ' + count + ' times');
+        }
+    </script>
+</body>
+</html>

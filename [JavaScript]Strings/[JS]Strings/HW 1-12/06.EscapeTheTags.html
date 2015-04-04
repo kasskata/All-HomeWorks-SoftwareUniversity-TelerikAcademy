@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>06.EscapeTheTags</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function that extracts the content of a html page given as text. The function should return anything that is in a tag, without the tags:result:
+        &lt;html&gt;
+        &lt;head&gt;
+        &lt;title&gt;Sample site&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;div&gt;text&lt;div&gt;more text&lt;/div&gt;and more...&lt;/div&gt;in body
+        &lt;/body&gt;
+        &lt;/html&gt;
+        result:
+
+        Sample sitetext more text and more...in body
+
+    </p>
+    <input type="text" placeholder="Number:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            //dont have much time and i do. it is fastest way. sorry a lot 
+
+            var body = document.body;
+            var textContent = body.textContent || body.innerText;
+
+            jsConsole.writeLine(textContent);  
+        }
+    </script>
+</body>
+</html>

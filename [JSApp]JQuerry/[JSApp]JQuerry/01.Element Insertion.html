@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<script>
+    $(document).ready(function () {
+        var div1 = $(document.body).append($('<div>'));
+        var h1 = $('<h1/>').text("Hello, JQuery!");
+        div1.append(h1);
+        var ul = $('<ul/>').insertAfter(h1);
+        for (var i = 0; i < 4; i++) {
+            var contentLi = $('<li/>').text('Content Number ' + i);
+            contentLi.css('list-style-type','upper-roman');
+            ul.prepend(contentLi);
+        }
+        var h2Below = div1.append($('<h2/>').text("My Dream - Programming HTML. I love it!"));
+    });
+</script>
+</body>
+</html>

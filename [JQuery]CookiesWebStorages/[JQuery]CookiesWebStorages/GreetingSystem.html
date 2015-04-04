@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <style>
+        body{
+            font-family: Tahoma, Helvetica, sans-serif;
+        }
+        h1{
+            background-color: mediumspringgreen;
+            border-radius: 5px;
+            width:30%;
+        }
+        ul{
+            border-radius: 5px;
+            background-color: mediumspringgreen;
+            width:30%;
+        }
+    </style>
+    <!--Create a greeting system with the following functionality:
+•	If the user visits the page for the first time, he should be asked to enter his name. The name then be added to the local storage.
+o	When the user opens the page for the second time, the application should greet him.
+•	Showing session visits count.
+•	Show total visits count.
+Try the same using the session storage. Shall it work?
+-->
+</head>
+<body>
+<h1>Login:</h1>
+<ul>
+
+</ul>
+<script>
+    $(function () {
+        if (!localStorage.getItem('counter')) {
+            localStorage.setItem('counter', 0);
+        }
+
+        if (!sessionStorage.getItem('acc')) {
+            var acc = $('<input type="text" placeholder="Account">');
+            $('body > ul').append(acc);
+
+            acc.change(function () {
+                sessionStorage.setItem('acc', acc.val());
+                sessionStorage.setItem('counter', 0);
+                acc.hide();
+                location.reload();
+            });
+        }
+        else {
+            var counter = parseInt(sessionStorage.getItem('counter'));
+            counter++;
+            sessionStorage.setItem('counter', counter);
+
+            var counterTotal = parseInt(localStorage.getItem('counter'));
+            counterTotal++;
+            localStorage.setItem('counter', counterTotal);
+
+            $('body > ul').append($('<h2>Hi, ' + sessionStorage.getItem('acc') +
+                    '!<p>Visited with account: ' + sessionStorage.getItem('counter') + '</p>' +
+                    '<p>Visited total:' + localStorage.getItem('counter') + '</p></h2>'));
+
+        }
+    });
+</script>
+</body>
+</html>

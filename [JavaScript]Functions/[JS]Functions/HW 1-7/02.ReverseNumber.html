@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>02.ReverseNumber</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function that reverses the digits of given decimal number. Example: 256  652
+    </p>
+    <input type="text" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var input = document.getElementById('input');
+            var number = input.value;
+
+            var reverse=new Array();
+
+            for (var i = number.length - 1; i >= 0; i--) {
+                    reverse.push(number[i]);
+            }
+            jsConsole.writeLine(reverse.join(''));
+        }
+    </script>
+</body>
+</html>

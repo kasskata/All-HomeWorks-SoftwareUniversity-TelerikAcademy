@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.3.2.min.js"></script>
+</head>
+<body>
+<ul>
+
+</ul>
+<div class="add"><span>[ADD]</span></div>
+<script>
+    //Целия ден(26.11), в който пиша домашното нямам интернет заради техническа авария на шибания MTEL(мегалан) и карам на
+    //една флашка, направих каквото мога но флашката остана на 5 мб. и пращям недовършено домашното, макар че ми се искаше да го дооправя.
+    //Наистина се извинявам...
+            //Калоян "kasskata" Анастасов
+    $(document).ready(function () {
+        var appID = "ibukcs4HwxxYo64HGsjc3eBDRYEq2Z1w2B7ABjKW";
+        var masterKey = "7m7YzgIoAQ64fktlNhuTgUC5zEFHGekdVPnDwXiO";
+        Parse.initialize("ibukcs4HwxxYo64HGsjc3eBDRYEq2Z1w2B7ABjKW", "7m7YzgIoAQ64fktlNhuTgUC5zEFHGekdVPnDwXiO");
+
+        var cNameInput = $('<input class="name" type="text"/>');
+        cNameInput.insertAfter($('ul'));
+
+        $('.add').on('click', addNew());
+        $('.name').on('change', addNew());
+
+        $.ajax({
+            method: "GET",
+            url: "https://api.parse.com/1/classes/Country",
+            headers: {
+                "X-Parse-Application-Id": appID,
+                "X-Parse-REST-API-Key": masterKey
+            }
+
+        }).success(
+                function (data) {
+                    var data = data["results"];
+                    for (var i = 0; i < data.length; i++) {
+                        var $buttonOnChange = $('<input type="text" placeholder="Change name" >');
+                        var $buttonExpand = $('<a href="#">[Expand]</a>');
+                        var $buttonOnRemove = $('<a href="#">[Remove]</a>');
+                        var $li = $('<li/>').text(data[i]["Name"]).appendTo($("ul")).append($buttonOnRemove);
+                        $buttonOnChange.addClass(data[i]["objectId"]).insertAfter($li);
+                        $buttonOnRemove.parent().addClass(data[i]["objectId"]);
+                        $buttonExpand.addClass(data[i]["objectId"]).insertAfter($li);
+                        $li.on('click', removeCountry($li.attr('class')));
+
+                        $buttonExpand.on("click",expandTowns());
+                        $buttonOnChange.change(function () {
+                            console.log($(this));
+                            var target = $(this)['context']['className'];
+                            var val = $(this).val();
+                            var appID = "ibukcs4HwxxYo64HGsjc3eBDRYEq2Z1w2B7ABjKW";
+                            var masterKey = "7m7YzgIoAQ64fktlNhuTgUC5zEFHGekdVPnDwXiO";
+
+                            $.ajax({
+                                method: "PUT",
+                                url: "https://api.parse.com/1/classes/Country/" + target + "",
+                                headers: {
+                                    "X-Parse-Application-Id": appID,
+                                    "X-Parse-REST-API-Key": masterKey
+                                },
+                                data: JSON.stringify({"Name": val})
+                            }).success(validOperation());
+                        });
+                    }
+                }
+        );
+
+        function expandTowns() {
+            var clas = $(this).attr('class');
+            return function (clas) {
+                var target = clas['currentTarget']['className'];
+
+                var appID = "ibukcs4HwxxYo64HGsjc3eBDRYEq2Z1w2B7ABjKW";
+                var masterKey = "7m7YzgIoAQ64fktlNhuTgUC5zEFHGekdVPnDwXiO";
+
+                $.ajax({
+                    method: "GET",
+                    url: "https://api.parse.com/1/classes/Country/" + target + "",
+                    headers: {
+                        "X-Parse-Application-Id": appID,
+                        "X-Parse-REST-API-Key": masterKey
+                    }
+                })
+            }
+        }
+
+        function addNew() {
+            return function () {
+                if (cNameInput.val() != '') {
+                    var input = cNameInput.val();
+                    $.ajax({
+                        method: "POST",
+                        url: "https://api.parse.com/1/classes/Country",
+                        headers: {
+                            "X-Parse-Application-Id": appID,
+                            "X-Parse-REST-API-Key": masterKey
+                        },
+                        data: JSON.stringify({"Name": "" + input + ""})
+                    }).success(validOperation());
+                }
+            }
+        }
+
+        function removeCountry(className) {
+            var clas = className;
+            return function (clas) {
+                var target = clas['currentTarget']['className'];
+
+                var appID = "ibukcs4HwxxYo64HGsjc3eBDRYEq2Z1w2B7ABjKW";
+                var masterKey = "7m7YzgIoAQ64fktlNhuTgUC5zEFHGekdVPnDwXiO";
+
+                $.ajax({
+                    method: "DELETE",
+                    url: "https://api.parse.com/1/classes/Country/" + target + "",
+                    headers: {
+                        "X-Parse-Application-Id": appID,
+                        "X-Parse-REST-API-Key": masterKey
+                    }
+                }).success(validOperation());
+            }
+        }
+
+        function validOperation() {
+            alert("Successfully operation");
+            location.reload();
+        }
+    });
+
+
+</script>
+
+</body>
+</html>

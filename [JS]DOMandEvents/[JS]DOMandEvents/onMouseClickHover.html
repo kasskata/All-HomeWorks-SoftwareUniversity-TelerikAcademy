@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.addEventListener('click', function(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+
+            var time = new Date();
+
+            document.getElementById('Click').innerHTML = "X:" + x + "; Y:" + y + " Time: " + time;
+            document.getElementById('Click').innerHTML += '</br>';
+        }, false);
+    </script>
+</head>
+<body>
+    <div id="Click">Just Click</div>
+</body>
+</html>

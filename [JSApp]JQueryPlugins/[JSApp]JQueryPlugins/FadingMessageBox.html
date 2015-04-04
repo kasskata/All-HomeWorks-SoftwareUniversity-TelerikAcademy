@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div id="message-box">
+
+</div>
+<script>
+    $(document).ready(function () {
+        (function ($) {
+            $.fn.messageBox = function () {
+                var $this = $(this);
+
+                $this.success = function(text){
+                    $this.text(text).hide().fadeIn(1000).fadeOut(3000);
+                }
+
+                $this.error = function(text){
+                    $this.text(text).hide().fadeIn(1000).fadeOut(3000);
+                }
+
+                return $this;
+            }
+        }(jQuery));
+
+        var messageBox = $('#message-box').messageBox();
+        messageBox.success('Success message.');
+        messageBox.error('Error message.');
+
+    });
+</script>
+</body>
+</html>

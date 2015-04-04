@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>01.CoordSystem</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write functions for working with shapes in  standard Planar coordinate system
+        Points are represented by coordinates P(X, Y)
+        Lines are represented by two points, marking their beginning and ending
+        L(P1(X1,Y1), P2(X2,Y2))
+        Calculate the distance between two points
+        Check if three segment lines can form a triangle
+
+    </p>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        var x1 = 3;
+        var y1 = 4;
+
+        var x2 = 9;
+        var y2 = 13;
+        
+        var x3 = 9;
+        var y3 = 13;
+
+        var x4 = 12;
+        var y4 = 6;
+
+        var x5 = 12;
+        var y5 = 6;
+
+        var x6 = 3;
+        var y6 = 4;
+
+        var line1 = InitilizeLines(x1, y1, x2, y2);
+        var line2 = InitilizeLines(x3, y3, x4, y4);
+        var line3 = InitilizeLines(x5, y5, x6, y6);
+
+        var triangle = isTriangle(line1, line2, line3);
+
+        jsConsole.writeLine("do we have triangle?:"+triangle);
+
+        //Functions
+        function InitilizeLines(x1, y1, x2, y2) {
+            var p1 = { X1: x1, Y1: y1 };
+            var p2 = { X2: x2, Y2: y2 };
+
+            var line = Math.sqrt(Math.pow((p1.X1 - p2.X2),2) + (Math.pow((p1.Y1 - p2.Y2),2)));
+
+            return line;
+        }
+        function isTriangle(line1, line2, line3)
+        {
+            return line1 + line2 > line3 && line2 + line3 > line1 && line3 + line1 > line2;
+        }
+     </script>
+</body>
+</html>

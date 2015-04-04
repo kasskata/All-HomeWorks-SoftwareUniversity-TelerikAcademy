@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>Is Point Within Circle</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write an expression that checks if given print (x,  y) is within a circle K(O, 5).
+
+    </p>
+    <input type="number" placeholder="Number:" id="inputX" />
+    <input type="number" placeholder="Number:" id="inputY" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var x = jsConsole.readFloat("#inputX");
+            var y = jsConsole.readFloat("#inputY");
+            var radius = 5;
+            var result;
+
+            if ((x * x + y * y) < radius * radius) {
+                result = "Point (" + x + "," + y + ") is within circle";
+            }
+            else {
+                result = "Point (" + x + "," + y + ") is outside circle";
+            }
+            jsConsole.writeLine(result);
+        }
+    </script>
+</body>
+</html>

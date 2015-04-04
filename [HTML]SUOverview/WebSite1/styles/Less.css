@@ -1,0 +1,39 @@
+body {
+  background-image: url(http://localhost:1774/images/backgroun.jpg);
+  color: white;
+  font-family: Consolas;
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+}
+body img {
+  position: absolute;
+  top: 10px;
+  left: 650px;
+}
+body section {
+  border: 1px solid grey;
+  background-color: rgba(32, 32, 30, 0.76);
+  width: 680px;
+  padding: 5px;
+}
+body h2 {
+  color: #f3cd60;
+}
+body ul li {
+  list-style-type: none;
+  font-size: 17px;
+}
+body ul li strong {
+  font-size: 22px;
+}
+body h3:before {
+  content: "■";
+  color: #f3cd60;
+  margin: 0px;
+}
+body span {
+  position: relative;
+  left: 760px;
+  top: 120px;
+  font-size: 13px;
+}

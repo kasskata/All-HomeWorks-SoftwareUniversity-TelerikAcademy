@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballDb", "FootballDb\FootballDb.csproj", "{2E2E40CE-4A1E-4616-BA08-2C4BDB9D26EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ToJSON", "02.ToJSON\02.ToJSON.csproj", "{415EF9EF-0C81-48A5-A3FA-3EF0AA61E7B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.ExportInternationalMatchesAsXML", "03.ExportInternationalMatchesAsXML\03.ExportInternationalMatchesAsXML.csproj", "{021EE775-368F-4FB9-B266-BBBAF99A7EAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.ImportLeaguesAndTeamsFromXML", "04.ImportLeaguesAndTeamsFromXML\04.ImportLeaguesAndTeamsFromXML.csproj", "{E75D7C54-9884-4D19-815C-B6AC2EA63067}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Part2.EFCodeFirst", "Part2.EFCodeFirst\Part2.EFCodeFirst.csproj", "{FAC0A157-94A2-49F9-AEBE-F5D4C735A87B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.PhonebookToJSON", "07.PhonebookToJSON\07.PhonebookToJSON.csproj", "{7AEE954C-AE88-480E-947F-2BB217DBA8CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.GenerateRadnomMatches", "05.GenerateRadnomMatches\05.GenerateRadnomMatches.csproj", "{6236BBBC-03F6-435E-88C1-5DDFB8C20276}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E2E40CE-4A1E-4616-BA08-2C4BDB9D26EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2E40CE-4A1E-4616-BA08-2C4BDB9D26EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2E40CE-4A1E-4616-BA08-2C4BDB9D26EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2E40CE-4A1E-4616-BA08-2C4BDB9D26EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415EF9EF-0C81-48A5-A3FA-3EF0AA61E7B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415EF9EF-0C81-48A5-A3FA-3EF0AA61E7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415EF9EF-0C81-48A5-A3FA-3EF0AA61E7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415EF9EF-0C81-48A5-A3FA-3EF0AA61E7B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{021EE775-368F-4FB9-B266-BBBAF99A7EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021EE775-368F-4FB9-B266-BBBAF99A7EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021EE775-368F-4FB9-B266-BBBAF99A7EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021EE775-368F-4FB9-B266-BBBAF99A7EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E75D7C54-9884-4D19-815C-B6AC2EA63067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E75D7C54-9884-4D19-815C-B6AC2EA63067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E75D7C54-9884-4D19-815C-B6AC2EA63067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E75D7C54-9884-4D19-815C-B6AC2EA63067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC0A157-94A2-49F9-AEBE-F5D4C735A87B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC0A157-94A2-49F9-AEBE-F5D4C735A87B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC0A157-94A2-49F9-AEBE-F5D4C735A87B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC0A157-94A2-49F9-AEBE-F5D4C735A87B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AEE954C-AE88-480E-947F-2BB217DBA8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AEE954C-AE88-480E-947F-2BB217DBA8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AEE954C-AE88-480E-947F-2BB217DBA8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AEE954C-AE88-480E-947F-2BB217DBA8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6236BBBC-03F6-435E-88C1-5DDFB8C20276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6236BBBC-03F6-435E-88C1-5DDFB8C20276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6236BBBC-03F6-435E-88C1-5DDFB8C20276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6236BBBC-03F6-435E-88C1-5DDFB8C20276}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

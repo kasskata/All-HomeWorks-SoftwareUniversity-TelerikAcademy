@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>07.GreaterFrom5Vars</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a script that finds the greatest of given 5 variables.
+    </p>
+    <input type="number" placeholder="Number:" id="first" />
+    <input type="number" placeholder="Number:" id="second" />
+    <input type="number" placeholder="Number:" id="thirth" />
+    <input type="number" placeholder="Number:" id="forth" />
+    <input type="number" placeholder="Number:" id="fiveth" />
+
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var box1 = jsConsole.readInteger("#first");
+            var box2 = jsConsole.readInteger("#second");
+            var box3 = jsConsole.readInteger("#thirth");
+            var box4 = jsConsole.readInteger("#forth");
+            var box5 = jsConsole.readInteger("#fiveth");
+
+            var biggestNumber = box1;
+
+            if (biggestNumber < box2)
+            {
+                biggestNumber = box2;
+            }
+            if (biggestNumber < box3)
+            {
+                biggestNumber = box3;
+            }
+            if (biggestNumber < box4)
+            {
+                biggestNumber = box4;
+            }
+            if (biggestNumber < box5)
+            {
+                biggestNumber = box5;
+            }
+            jsConsole.writeLine("Bigest number is: " + biggestNumber);
+        }
+    </script>
+</body>
+</html>

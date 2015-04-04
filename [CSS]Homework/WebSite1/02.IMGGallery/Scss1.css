@@ -1,0 +1,36 @@
+body {
+  background-image: url(http://www.hdewallpaper.com/wp-content/uploads/2013/08/Black-cat-desktop-backgrounds-Wallpaper.jpg);
+  background-size: 100%;
+  background-attachment: fixed; }
+  body h2 {
+    font-family: impact,arial,Times New Roman;
+    font-size: 30px;
+    color: pink; }
+  body header {
+    display: inline-block;
+    height: 20px; }
+    body header sup {
+      font-family: 'Script MT';
+      font-size: 12px; }
+  body ul {
+    width: 100%;
+    height: 20%;
+    display: inline; }
+    body ul li {
+      border: 5px solid pink;
+      display: inline-block; }
+      body ul li img {
+        width: 190px;
+        height: 100px; }
+      body ul li div {
+        border: 5px solid pink;
+        position: absolute;
+        display: none; }
+      body ul li:hover div {
+        display: block;
+        left: 25%; }
+        body ul li:hover div img {
+          width: 700px;
+          height: 500px;
+          margin: 10px; }
+

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>01.FirstBiggerThanSecondReverseIt</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        ...
+    </p>
+    <input type="number" placeholder="Number:" id="firstNumber" />
+    <input type="number" placeholder="Number:" id="secondNumber" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var first = jsConsole.readInteger("#firstNumber");
+            var second = jsConsole.readInteger("#secondNumber");
+            
+            jsConsole.writeLine(first);
+            jsConsole.writeLine(second);
+
+            if (first > second) {
+                jsConsole.writeLine("Statement power!");
+                var exchange = first;
+                first = second;
+                second = exchange;
+
+            }
+
+            jsConsole.writeLine(first);
+            jsConsole.writeLine(second);
+        }
+    </script>
+</body>
+</html>

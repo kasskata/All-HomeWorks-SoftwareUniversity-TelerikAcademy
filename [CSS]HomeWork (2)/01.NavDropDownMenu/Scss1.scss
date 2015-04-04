@@ -1,0 +1,32 @@
+body
+{
+	a{
+	color:black;
+	text-decoration:none;
+	}
+	nav{
+	font-size:1.2em;
+		ul{
+		display:inline-block;
+		list-style-type:none;
+		position:relative;
+			li{
+				ul{
+				display:none;
+				}
+
+				&:hover{
+					a{
+					text-decoration:underline;
+					}
+
+					ul{
+					color:grey;
+					display:block;
+					left:-30px;
+					}
+				}
+			}
+		}
+	}
+}

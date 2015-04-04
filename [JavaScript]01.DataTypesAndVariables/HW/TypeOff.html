@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JS-Console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>All Variables with "typeof":</p>
+    <div id="js-console"></div>
+    <script src="../JS-Console/js-console.js"></script>
+    <script>
+        var allLiterals = [123,'123',true,false,1234.123,,];
+        allLiterals[6] = [1, 2, 3, 4, 5, 6, 7];
+        allLiterals[5];
+        allLiterals[7] = null;
+        var intigers = 125214124;
+        var floats = 1.123;
+        var Arr = [1, 2.3456, '7890'];
+        var boolean = true;
+        var order = "pizza";
+        
+        function Get(menuItem) {
+            if (menuItem == "pizza") {
+                console.log("Have " + menuItem + ".");
+            }
+        }
+        var tempОrder = { OrderIs: Get("pizza"), type: "To much peperony", size: 30 };
+        allLiterals[8] = tempОrder;
+        var string = "string literal!";
+        var undifined;
+        var nullable = null;
+
+        //Searching in Google and  found that function
+        var toType = function (obj)
+        {
+            return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
+        }
+        
+        for (var i = 0; i < allLiterals.length; i++)
+        {
+            jsConsole.writeLine('"' + allLiterals[i] +'"'+" is ------>  " + toType(allLiterals[i]));
+            //allLiterals[i] 
+            //toType(allLiterals[i]
+        }
+    </script>
+</body>
+</html>

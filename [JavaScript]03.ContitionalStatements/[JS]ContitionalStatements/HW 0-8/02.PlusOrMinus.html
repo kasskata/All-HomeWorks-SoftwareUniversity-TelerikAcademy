@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>02.PlusOrMinus</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a script that shows the sign (+ or -) of the product of three real numbers without calculating it. Use a sequence of if statements.
+    </p>
+    <input type="number" placeholder="Number:" id="first" />
+    <input type="number" placeholder="Number:" id="second" />
+    <input type="number" placeholder="Number:" id="thirth" />
+
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var x = jsConsole.readInteger("#first");
+            var y = jsConsole.readInteger("#second");
+            var z = jsConsole.readInteger("#thirth");
+
+            if ((x == 0) || (y == 0) || z == 0) {
+                jsConsole.writeLine("0");
+            }
+            //if positive X
+            if (x > 0) {
+                if (y > 0)                            //+x-y (+-z)
+                {
+                    if (z > 0) {
+                        jsConsole.writeLine("Sign is +");
+                    }
+                    else
+                        jsConsole.writeLine("Sign is -");
+                }
+                else if (y < 0)                       //+x-y (+-z)
+                {
+                    if (z > 0) {
+                        jsConsole.writeLine("Sign is -");
+                    }
+                    else {
+                        jsConsole.writeLine("Sign is +");
+                    }
+                }
+            }
+                //if negative x
+            else if (x < 0) {
+                if (y > 0)                              //-x+y (+-z)
+                {
+                    if (z > 0) {
+                        jsConsole.writeLine("Sign is -");
+                    }
+                    else
+                        jsConsole.writeLine("Sign is +");
+                }
+                else if (y < 0)                         //-x-y (+-z)
+                {
+                    if (z > 0) {
+                        jsConsole.writeLine("Sign is +");
+                    }
+                    jsConsole.writeLine("Sign is s-");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

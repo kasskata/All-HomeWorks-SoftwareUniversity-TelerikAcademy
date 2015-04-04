@@ -1,0 +1,43 @@
+body
+{
+width:730px;
+	header ul{
+		border:1px solid grey;
+		list-style-type:none;
+		background-color:lawngreen;
+		width:520px;
+		text-align:center;
+		li{
+		display:inline-block;
+			a{
+			color:darkblue;
+			}
+		}
+	}
+	section{
+		width:560px;
+		position:relative;
+		border:1px solid grey;
+		fieldset{
+		display:inline-block;	
+		margin:5px;
+			width:240px;
+			img{
+			float:left;
+			width:70px;
+			height:70px;
+			}
+		}
+	}
+	div{
+	}
+	aside{
+		position:absolute;
+		left:580px;
+		top:100px;
+		font-size:x-small;
+	}
+	hr{
+		width:720px;
+	}
+}

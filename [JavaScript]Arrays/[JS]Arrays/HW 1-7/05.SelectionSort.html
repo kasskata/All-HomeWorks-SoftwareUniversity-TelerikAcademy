@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>...</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        ...
+    </p>
+    <input type="text" placeholder="Number:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var input = document.getElementById("input");
+            var array = new Array();
+            array = input.value.split(',');
+
+            //The algorithm
+            for (var index = 0; index < array.length - 1; index++) {
+                for (var j = index + 1; j < array.length; j++) {
+                    if (array[index] > array[j]) // swap items
+                    {
+                        var exchange = array[index];
+                        array[index] = array[j];
+                        array[j] = exchange;
+                    }
+                }
+            }
+            //print sorted array
+            jsConsole.writeLine(array.join(', '));
+        }
+    </script>
+</body>
+</html>

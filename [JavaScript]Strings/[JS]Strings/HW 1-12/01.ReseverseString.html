@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>...</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a JavaScript function reverses string and returns itExample: "sample"  "elpmas".
+
+    </p>
+    <input type="text" placeholder="Number:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var input = new String(document.getElementById('input')
+                .value);
+
+            input.reverse = function () {
+                var tupni = new Array();
+                for (var i = 0; i < input.length; i++) {
+                    tupni[input.length-1-i] = input[i];
+                }
+                return tupni;
+            };
+
+            jsConsole.writeLine(input.reverse());
+            jsConsole.writeLine();
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\Part2.EFCodeFirst\bin\Debug\Part2.EFCodeFirst.exe.config

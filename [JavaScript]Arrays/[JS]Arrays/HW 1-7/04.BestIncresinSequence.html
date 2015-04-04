@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>04.BestIncresinSequence</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a script that finds the maximal increasing sequence in an array. Example: {3, 2, 3, 4, 2, 2, 4}  {2, 3, 4}.
+    </p>
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+
+            var array = [1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,];
+            var firstItem = 0;
+            var maxLength = 1;
+
+
+            for (var i = 0; i < array.length - 1; i++) {
+                var currentLength = 1;
+                var previous = array[i];
+                var j = i + 1;
+                for (; j < array.length; j++) {
+                    if (previous < array[j]) {
+                        previous = array[j];
+                    }
+                    else {
+                        break;
+                    }
+                }
+                currentLength = j - i;
+                if (currentLength > maxLength) {
+                    maxLength = currentLength;
+                    firstItem = i;
+                }
+            }
+            for (var i = firstItem; i < firstItem + maxLength; i++) {
+                jsConsole.write(" " + array[i]);
+            }
+            jsConsole.writeLine();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ebfee56f-d1a0-4e6f-9320-65af4af6c597" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:22136/CalcDistance.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CalcDistance.xsd" MetadataType="Schema" ID="f6994cf7-75d4-45e1-9d69-6b59617fc86a" SourceId="1" SourceUrl="http://localhost:22136/CalcDistance.svc?xsd=xsd1" />
+    <MetadataFile FileName="CalcDistance.disco" MetadataType="Disco" ID="4555f19e-a530-488c-868b-63682f8f9bcf" SourceId="1" SourceUrl="http://localhost:22136/CalcDistance.svc?disco" />
+    <MetadataFile FileName="CalculateDistance.wsdl" MetadataType="Wsdl" ID="1379de7c-9707-4d23-9a2e-c0e4a8a628b8" SourceId="1" SourceUrl="http://localhost:22136/CalcDistance.svc?wsdl" />
+    <MetadataFile FileName="CalcDistance1.xsd" MetadataType="Schema" ID="0265a325-b3cd-41c5-bf42-242167132a3d" SourceId="1" SourceUrl="http://localhost:22136/CalcDistance.svc?xsd=xsd0" />
+    <MetadataFile FileName="CalcDistance2.xsd" MetadataType="Schema" ID="eb745521-647f-48f4-b04f-a1a8ddf929d0" SourceId="1" SourceUrl="http://localhost:22136/CalcDistance.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

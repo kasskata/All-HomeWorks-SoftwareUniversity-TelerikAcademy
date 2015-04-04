@@ -1,0 +1,204 @@
+﻿$border: 1px solid #bababa;
+
+@mixin gradient($first,$second) {
+    background: linear-gradient($first,$second);
+}
+
+@mixin gradient-horizont($first,$second) {
+    background: $first; /* Old browsers */
+    background: -moz-linear-gradient(left, $first 0%, $second 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,$first), color-stop(100%,$second)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, $first 0%,$second 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, $first 0%,$second 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, $first 0%,$second 100%); /* IE10+ */
+    background: linear-gradient(to right, $first 0%,$second 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='$second',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin gradient-Diagonal($first,$second) {
+    background: $first; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, $first 0%, $second 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$first), color-stop(100%,$second)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, $first 0%,$second 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, $first 0%,$second 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, $first 0,$second 100%); /* IE10+ */
+    background: linear-gradient(135deg, $first 0%,$second 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@mixin gradient-RAdial($first,$second) {
+    background: $first; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,$first 0%, $second 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$first), color-stop(100%,$second)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, $first 0%,$second 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, $first 0%,$second 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, $first 0%,$second 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, $first 0%,$second 100%); /* W3C */
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+body {
+    @include gradient(#808080,white);
+    color: #7d7c7c;
+
+    #wrapper {
+        margin-top: 0;
+        border: $border;
+        background: #ffffff;
+
+        header {
+            margin: 5px;
+            border: 2px solid #bababa;
+            padding: 10px;
+
+            ul {
+                margin: 0 auto;
+                list-style-type: none;
+                text-align: center;
+
+                li {
+                    display: inline-block;
+                    padding: 10px;
+                    margin: 10px;
+                    border: $border;
+
+                    &:hover {
+                        @include gradient(#808080,white);
+                    }
+                }
+            }
+        }
+
+        section {
+            border: 2px solid #bababa;
+
+            article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 2px solid #bababa;
+                margin: 5px;
+
+                .gradients {
+                    border: $border;
+                    padding: 5px;
+                    margin: 5px;
+                    //GRADIENTS//
+                    div:nth-child(2) {
+                        @include gradient(purple,white);
+                    }
+
+                    div:nth-child(3) {
+                        @include gradient(blue,white);
+                    }
+
+                    div:nth-child(4) {
+                        @include gradient(darkgreen,white);
+                    }
+
+                    div:nth-child(5) {
+                        @include gradient(yellow,white);
+                    }
+
+                    div:nth-child(6) {
+                        @include gradient(orange,white);
+                    }
+
+                    div:nth-child(7) {
+                        @include gradient(red,white);
+                    }
+
+
+                    div {
+                        display: inline-block;
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 10px;
+                        border: $border;
+                    }
+                }
+
+                .gradients:nth-child(2) > div:nth-child(2) {
+                    @include gradient-horizont(purple,white);
+                }
+
+                .gradients:nth-child(2) > div:nth-child(3) {
+                    @include gradient-horizont(blue,white);
+                }
+
+                .gradients:nth-child(2) > div:nth-child(4) {
+                    @include gradient-horizont(darkgreen,white);
+                }
+
+                .gradients:nth-child(2) > div:nth-child(5) {
+                    @include gradient-horizont(yellow,white);
+                }
+
+                .gradients:nth-child(2) > div:nth-child(6) {
+                    @include gradient-horizont(orange,white);
+                }
+
+                .gradients:nth-child(2) > div:nth-child(7) {
+                    @include gradient-horizont(red,white);
+                }
+
+                .gradients:nth-child(3) > div:nth-child(2) {
+                    @include gradient-Diagonal(purple,white);
+                }
+
+                .gradients:nth-child(3) > div:nth-child(3) {
+                    @include gradient-Diagonal(blue,white);
+                }
+
+                .gradients:nth-child(3) > div:nth-child(4) {
+                    @include gradient-Diagonal(darkgreen,white);
+                }
+
+                .gradients:nth-child(3) > div:nth-child(5) {
+                    @include gradient-Diagonal(yellow,white);
+                }
+
+                .gradients:nth-child(3) > div:nth-child(6) {
+                    @include gradient-Diagonal(orange,white);
+                }
+
+                .gradients:nth-child(3) > div:nth-child(7) {
+                    @include gradient-Diagonal(red,white);
+                }
+            }
+             article:nth-child(3) > .gradients > div:nth-child(2){
+                    @include gradient-RAdial(purple,white);
+                }
+                article:nth-child(3) > .gradients > div:nth-child(3){
+                    @include gradient-RAdial(blue,white);
+                }
+                article:nth-child(3) > .gradients > div:nth-child(4){
+                    @include gradient-RAdial(darkgreen,white);
+                }
+                article:nth-child(3) > .gradients > div:nth-child(5){
+                    @include gradient-RAdial(yellow,white);
+                }
+                article:nth-child(3) > .gradients > div:nth-child(6){
+                    @include gradient-RAdial(orange,white);
+                }
+                article:nth-child(3) > .gradients > div:nth-child(7){
+                    @include gradient-RAdial(red,white);
+                }
+        }
+
+        footer {
+            border: 2px solid #bababa;
+            margin: 5px;
+            padding: 10px;
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>10.Palindromes</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a program that extracts from a given text all palindromes,
+        e.g. "ABBA", "lamal", "exe".
+
+        var str = stringFormat("Hello {0}!","Peter");
+        //str = "Hello Peter!";
+    </p>
+    <input type="text" placeholder="Number:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var text = document.getElementById('input').value;
+
+            jsConsole.writeLine(extractPalindromes(text).join(''));
+
+            function extractPalindromes(text) {
+                var left, right, substr,
+                    arr = [];
+                for (var i = 0; i < text.length; i++) {
+                    if (text[i] === text[i + 1]) {
+                        right = i + 1;
+                        for (left = i; left >= 0; left--, right++) {
+                            if (text[left] != text[right]) break;
+                        }
+                        substr = text.substring(left + 1, right);
+                        arr.push(substr);
+                        i = right - 2;
+                    }
+                }
+                return arr;
+            }
+        }
+    </script>
+</body>
+</html>

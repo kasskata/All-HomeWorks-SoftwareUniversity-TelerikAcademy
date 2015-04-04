@@ -1,0 +1,86 @@
+@mixin border{
+border-radius:15px;
+background-color:#B6FF00;
+}
+
+body
+{
+	font-size:16px;
+	font-family:Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+	ul {
+		list-style-type:none;
+	}
+	a{
+		text-decoration:none;
+		color:black;
+	}
+	#wrapper{
+		width:960px;
+		height:408px;
+		color:white;
+		ul{
+			li{
+				position:relative;
+				top:-10px;
+				left:-45px;
+				margin:10px;
+				margin-left:5px;
+				width:160px;
+				height:30px;
+				display:block;
+				text-align:center;
+				
+							padding-top:12px;
+				&:hover{
+					text-decoration:underline;
+						ul{
+							position:absolute;
+							left:160px;
+							top:0px;
+							li{
+								display:block;
+								background-color:#008000;
+								width:600px;
+								text-align:left;
+								margin:10px;
+								margin-left:5px;
+								color:white;
+								height:60px;
+								&:hover{
+									height:auto;
+									margin:10px;
+									background-color:#008000;
+									padding:15px;
+									padding-top:0px;
+									color:white;
+									overflow:auto;
+										a{
+										padding-top:10px;
+										padding-left:5px;
+										display:block;
+										text-align:left;
+										margin-bottom:10px;
+										color:white;
+										}
+										img{
+										display:block;
+										width:600px;
+										}
+								}
+							}
+							img{
+							display:none;
+							}
+						}
+					}
+				@include border;
+				ul{
+					li{
+					display:none;
+					color:white;
+					}
+				}
+			}
+		}	
+	}
+}

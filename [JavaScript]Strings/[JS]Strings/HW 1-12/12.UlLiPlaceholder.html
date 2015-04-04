@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>12.UlLiPlaceholder</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function that creates a HTML UL using a template for every HTML LI. The source of the list should an array of elements. Replace all placeholders marked with &ndash;{&hellip;}&ndash;   with the value of the corresponding property of the object. Example:
+        &lt;div data-type=&quot;template&quot; id=&quot;list-item&quot;&gt;
+        &lt;strong&gt;-{name}-&lt;/strong&gt; &lt;span&gt;-{age}-&lt;/span&gt;
+        /div&gt;
+        var people = [{name: &quot;Peter&quot;, age: 14},&hellip;];
+        var tmpl = document.getElementById(&quot;list-item&quot;).innerHtml;
+        var peopleList = generateList(people,template);
+        //peopleList = &quot;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Peter&lt;/strong&gt;
+         &lt;span&gt;14&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&hellip;&lt;/li&gt;&hellip;&lt;/ul&gt;&quot;
+
+</p>
+    <div data-type="template" id="list-item">
+        <strong>-{name}-</strong> <span>-{age}-</span>
+    </div>
+        <div id="js-console">
+        </div>
+        <script src="../JSConsole/js-console.js"></script>
+        <script>
+            var people = [
+                { name: "Stancho", age: 3 },
+                { name: "Iwan", age: 29 },
+                { name: "Kosio", age: 30 }];
+
+            var temp = document.getElementById("list-item").innerHTML;
+            var finalArr = generateList(temp, people);
+
+            for (var i = 0; i < finalArr.length; i += 2) {
+                jsConsole.writeLine("<ul><li><strong>" + finalArr[i] + "</strong><span>" + finalArr[i + 1] + "</span></li><li>…</li>…</ul>")
+            }
+
+            function generateList(temp, people) {
+                var holder = temp;
+                var liArr = [];
+                for (var person in people) {
+                    var index = temp.indexOf("{name}");
+                    var index2 = temp.indexOf("{age}");
+                    temp = temp.replace("{name}", people[person].name);
+                    liArr.push(temp.substr(index, people[person].name.length));
+                    temp = holder;
+                    temp = temp.replace("{age}", people[person].age);
+                    liArr.push(temp.substr(index2, people[person].age.toString().length));
+                    temp = holder;
+                }
+                return liArr;
+            }
+
+            jsConsole.writeLine(index2);
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>...</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        ...
+    </p>
+    <input type="number" placeholder="Number:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var number = jsConsole.readInteger("#input");
+            var isPrime = true;
+            if (number < 2) {
+                jsConsole.writeLine("Numbers smaller than 2 is not prime numbers.");
+                isPrime = false;
+            }
+            else {
+                for (var i = 2; i < number; i++) {
+                    if (number % i == 0) {
+                        isPrime = false;
+                    }
+                }
+            }
+
+            if (isPrime == true) {
+                jsConsole.writeLine("Number " + number + " is prime number.");
+            }
+            else {
+                jsConsole.writeLine("Number " + number + " is NOT prime number.", number);
+            }
+        }
+    </script>
+</body>
+</html>

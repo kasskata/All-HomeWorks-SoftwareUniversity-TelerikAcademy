@@ -1,0 +1,113 @@
+﻿//mixin
+@mixin BorderProperties{
+	border:0.1em solid black;
+	border-radius:9px;
+	padding:10px;
+	color:white;
+	}
+@mixin Anchorfix{
+		a{
+		color:lightgrey;
+		font-style:italic;
+		text-decoration:none;
+		}
+	}
+body
+{
+	background-image:url(http://localhost:32837/01/images/gradientBackground.png);
+	#reg-form-container{
+		position:absolute;
+		right:0;
+		top:0;
+		margin-top:40px;
+		margin-right:100px;
+		color:white;
+		input{
+			@include BorderProperties;
+			border-color:#603382;
+			background-color:#B35EF3;
+			margin:5px;
+			height:22px;
+			padding:0;
+			text-decoration:center;
+		}
+		button{
+		@extend input;
+			width:100px;
+		}
+	}
+	nav ul {
+		@include BorderProperties;
+		width:74%;
+		height:29px;
+		li{
+			list-style-type:none;
+			display:inline-block;
+			position:relative;
+			padding:4px;
+			ul{
+			display:none;
+			}
+			a{
+			color:white;
+			text-decoration:none;
+			}
+			&:hover{
+				ul{
+				display:block;
+				position:absolute;
+				top:30px;
+				left:0px;
+				@include BorderProperties;
+				li{
+					@include BorderProperties;
+					display:block;
+				}
+				width:200px;
+				height:auto;
+				background-color:#BD76F3;
+				}	
+			}
+		}
+	}
+	article{
+		@include BorderProperties;
+		@include Anchorfix;
+		margin:15px;
+		overflow:auto;
+		width:70%;
+		footer{
+		text-align:right;
+		}
+	}
+	aside{
+		overflow:auto;
+		width:30%;
+		position:absolute;
+		right:0px;
+		top:205px;
+		ul li{
+		margin-top:10px;
+		margin-bottom:10px;
+		margin-right:25px;
+		margin-left:20px;
+		@include BorderProperties;
+		@include Anchorfix;
+		border-radius:0;
+		list-style-type:none;
+			ul li{
+			border:none;
+			position:relative;
+			left:-30px;
+			margin:0px;;
+			&:before{
+				content:url(http://localhost:32837/01/images/li-dot.png);
+				}
+			}
+		}
+	}
+	footer{
+	text-align:center;
+	color:white;
+	}
+}

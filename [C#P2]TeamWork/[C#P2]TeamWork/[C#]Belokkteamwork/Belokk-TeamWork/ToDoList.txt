@@ -1,0 +1,49 @@
+TODO LIST
+
+1. Create playfield
+	1.1 Properties and fields:
+		1.1.1 Size //rectangular or quadratic
+			- Width
+			- Height
+		1.1.2 Foreground/Background color
+		1.1.3 Representation as matrix(byte[,] or Enumeration) // 1 = wall, 2 = player, 3 = player's trail
+		1.1.4 Initialization(with filled row 0, row (n -1), col 1, col(n - 1))
+		1.1.5 Bonuses for the player
+
+2. Create player
+	2.1 Properties and fields:
+		2.1.1 Symbol
+		2.1.2 Color
+		2.1.3 Position(x, y)
+	2.2 Methods:
+		2.2.1 Movement
+		2.2.2 Make trail(when move on empty cell of the playfields matrix) //structure or class
+
+3. Create enemies(balls)
+	3.1 Properties and fields:
+		3.1.1 Symbol
+		3.1.2 Colors
+		3.1.3 Position(x,y)
+	3.2 Methods:
+		3.2.1 Movement(with collision detection system - hitting: wall, player or player's trail)
+
+4. Game Settings
+	4.1 Lives
+	4.2 Level
+	4.3 Difficulty
+
+5. Draw Engine
+	5.1 Properties and fields:
+		5.1.1 Position(x)
+		5.1.2 Position(y)
+		5.1.3 Color to draw
+		5.1.4 Symbol to draw
+	5.2 Methods:
+		5.1.1 Move on position and write
+
+TODO - Final
+
+1. Условия за умиране на човечето
+2. Подобрение на движенията на играча
+3. След GAME OVER да чака определен клавиш за излизане (иначе директно излиза ако е бил задържан някой)
+4. Да се ходи на следващото ниво след приключване на текущото

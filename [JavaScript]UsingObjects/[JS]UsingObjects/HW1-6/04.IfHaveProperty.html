@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>04.IfHaveProperty</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function that checks if a given object contains a given property
+        var obj  = …;
+        var hasProp = hasProperty(obj,"length");
+
+    </p>
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var Student = {
+                age: 15,
+                name: 'kostaa'
+            }
+            var point = {
+                x: 1,
+                y: 2
+            }
+            var studentProperty = hasProperty("name" , Student);
+            var pointProperty = hasProperty("name" , point);
+
+            jsConsole.writeLine(studentProperty);
+            jsConsole.writeLine(pointProperty);
+
+            function hasProperty(property,object) {
+                for (var i in object) {
+                    if (i == property) {
+                        return true;
+                        break;
+                    }
+                }
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

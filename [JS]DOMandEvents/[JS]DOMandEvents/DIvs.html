@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Divs Content</title>
+</head>
+<body>
+<div>div</div>
+<div>div</div>
+<div class="empty"></div>
+<div> div
+    <div> div</div>
+</div>
+<div>div</div>
+<div>div</div>
+<div class="empty"></div>
+<div> div
+    <div> div</div>
+</div>
+<div>div</div>
+<div>div</div>
+<div class="empty"></div>
+<div> div
+    <div> div</div>
+</div>
+<div>div</div>
+<div>div</div>
+<div class="empty"></div>
+<div> div
+    <div> div</div>
+</div>
+<script>
+    var text = document.getElementsByTagName("div");
+    console.log(text.length);
+    for (var i = 0; i < text.length; i++) {
+        if (text[i].innerText == "") {
+            continue;
+        }
+        console.log(text[i].innerText);
+    }
+
+</script>
+</body>
+</html>

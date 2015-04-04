@@ -1,0 +1,6 @@
+SELECT
+	a.Title AS Title,
+	a.Date AS Date
+FROM Ads a
+WHERE a.Date BETWEEN '2014-12-26 00:00:00.000' AND '2015-01-01 23:59:59'
+ORDER BY a.Date

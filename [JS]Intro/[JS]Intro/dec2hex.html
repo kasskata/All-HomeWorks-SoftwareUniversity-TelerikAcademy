@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function toHex() {
+            var number= parseInt(prompt("Please, enter your number:","number"));
+            if(number>0){
+                alert(number.toString(16));
+            }
+            else{
+                alert("Number isn't positive")
+            }
+        }
+    </script>
+</head>
+<body>
+        <button style="background-color: yellow; border-radius: 5px;" onclick="toHex()">I will show your number in hex</button>
+</body>
+</html>

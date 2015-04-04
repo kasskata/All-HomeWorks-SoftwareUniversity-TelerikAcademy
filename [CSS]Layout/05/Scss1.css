@@ -1,0 +1,32 @@
+body {
+  width: 730px; }
+  body header ul {
+    border: 1px solid grey;
+    list-style-type: none;
+    background-color: lawngreen;
+    width: 520px;
+    text-align: center; }
+    body header ul li {
+      display: inline-block; }
+      body header ul li a {
+        color: darkblue; }
+  body section {
+    width: 560px;
+    position: relative;
+    border: 1px solid grey; }
+    body section fieldset {
+      display: inline-block;
+      margin: 5px;
+      width: 240px; }
+      body section fieldset img {
+        float: left;
+        width: 70px;
+        height: 70px; }
+  body aside {
+    position: absolute;
+    left: 580px;
+    top: 100px;
+    font-size: x-small; }
+  body hr {
+    width: 720px; }
+

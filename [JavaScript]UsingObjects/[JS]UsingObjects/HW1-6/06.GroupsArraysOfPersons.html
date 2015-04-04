@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>06.GroupsArraysOfPersons</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a function that groups an array of persons by age,
+         first or last name. The function must return an associative array,
+     with keys - the groups, and values -arrays with persons in this groups
+        Use function overloading (i.e. just one function)
+        var persons = {…};
+        var groupedByFname = group(persons,"firstname");
+        var groupedByAge= group(persons,"age");
+
+    </p>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        var persons = [
+    { firstname: "Gosho", lastname: "Petrov", age: 36 },
+    { firstname: "Bay", lastname: "Ivan", age: 81 },
+    { firstname: "Todor", lastname: "Minchev", age: 32 },
+    { firstname: "kaco", lastname: "african", age: 65 }];
+
+        var groupedByAge = grouped(persons, "age");
+        var groupedByFirstName = grouped(persons, "firstName");
+
+        for (var i in groupedByAge) {
+            jsConsole.writeLine(i + " => " + groupedByAge[i]);
+        }
+        for (var i in groupedByFirstName) {
+            jsConsole.writeLine(i + " => " + groupedByFirstName[i]);
+        }
+
+        function grouped(person, property) {
+            var array = new Array();
+            for (var i = 0; i < person.length; i++) {
+
+                for (var j in person[i]) {
+
+                    if (j == property) {
+                        array.push(person[i][j]);
+                    }
+                }
+            }
+            var wordsCount = {};
+            var word = {};
+            for (var i in array) {
+                word = array[i];
+                if (wordsCount[word]) {
+                    wordsCount[word]++;
+                }
+                else {
+                    wordsCount[word] = 1;
+                }
+            }
+            return wordsCount;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        body section button{
+            border-radius:10px;
+            border-bottom-right-radius:0;
+        }
+        body , button{
+            font-family:Arial;
+            font-size:20px;
+            color:#2d4358;
+            position:relative;
+            margin-top:2px;
+            margin-bottom:2px;
+        }
+        .price{
+            background-color:#2c425a;
+            border-top-left-radius:10px;
+            width:120px;
+            float:right;
+            color:white;
+            position:absolute;
+            right:0;
+            bottom:0;
+        }
+        aside {
+            position:absolute;
+            top:65px;
+            left:620px;
+            border:1px solid #d9eefa; 
+            background-color:rgba(247, 252, 255, 0.71); 
+            height:760px;
+            width:200px;
+        }
+        .toTheRight {
+            position:absolute;
+            right:0px;
+            text-align: right;
+        }
+        input[type="range"] {
+            display:inline-block;
+            width:200px;
+        }
+        aside h3 {
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Apple's Laptops(6)</h2>
+        <button style="width:200px; height:240px; background-color:white;">
+            <strong>Apple Macbook Air</strong>
+            11.6 inch/1.3GHz
+            Haswell
+            <img src="Images/laptopito.png" />
+            <div class="price">$1,729.00</div>
+        </button>
+        <button style="width:200px; height:240px; background-color:white;">
+            <strong>Apple Macbook Air</strong>
+            11.6 inch/1.4GHz
+            Haswell
+            <img src="Images/laptopito.png" />
+            <div class="price">$1,825.00</div>
+        </button>
+        <button style="width:200px; height:240px; background-color:white;">
+            <strong>Apple Macbook Air</strong>
+            13.3 inch/1.3GHz
+            Haswell
+            <img src="Images/laptopito.png" />
+            <div class="price">$1,919.00</div>
+        </button>
+        <br />
+        <button style="width:200px; height:240px; background-color:white;">
+            <strong>Apple Macbook Air</strong>
+            13.3 inch/1.4GHz
+            Haswell
+            <img src="Images/laptopito.png" />
+            <div class="price">$1,999.00</div>
+        </button>
+        <button style="width:200px; height:240px; background-color:white;">
+            <strong>Apple Macbook Air</strong>
+            11.6 inch/1.4GHz
+            Haswell 256GB SSD
+            <img src="Images/laptopito.png" />
+            <div class="price">$2,119.00</div>
+        </button>
+        <button style="width:200px; height:240px; background-color:white;">
+            <strong>Apple Macbook Pro</strong>
+            13.3 inch/2.5GHz Ivy Bridge
+            <img src="Images/laptopito.png" />
+            <div class="price">$1,729.00</div>
+        </button>
+        <br />
+        <button style="width:200px; height:240px; background-color:white;">
+            <strong>Apple Macbook Air</strong>
+            11.6 inch/1.3GHz
+            Haswell
+            <img src="Images/laptopito.png" />
+            <div class="price">$1,729.00</div>
+        </button>
+        <button style="width:200px; height:240px; background-color:white;">
+            <strong>Apple Macbook Air</strong>
+            11.6 inch/1.3GHz
+            Haswell
+            <img src="Images/laptopito.png" />
+            <div class="price">$1,729.00</div>
+        </button>
+        <button style="width:200px; height:240px; background-color:white;">
+            <strong>Apple Macbook Air</strong>
+            11.6 inch/1.3GHz
+            Haswell
+            <img src="Images/laptopito.png" />
+            <div class="price">$1,729.00</div>
+        </button>
+    </section>
+    <aside >
+        
+        <h3>Price</h3>
+        <span>1700</span>
+        <span class="toTheRight">2600</span>
+        <input type="range" min="1700" max="2600" step="50" />
+       
+         <h3>RAM</h3>
+        <span>2048</span>
+        <span class="toTheRight">4096</span>
+        <input type="range" min="2048" max="4096" step="1000" />
+        
+        <h3>Disc</h3>
+        <span>100GB</span>
+        <span class="toTheRight">2000GB</span>
+        <input type="range" min="100" max="2000" step="300" />
+        
+        <h3>Display</h3>
+        <span>12"</span>
+        <span class="toTheRight">20"</span>
+        <input type="range" min="12" max="20" step="2.5" />
+        
+        <h3>Weight</h3>
+        <span>1</span><span class="toTheRight">6</span>
+        <input type="range" min="1" max="6" step="0.500" />
+        
+        <h3>Warranty</h3>
+        <span>12 month</span><span class="toTheRight">60 month</span>
+        <input type="range" min="12" max="60" step="6" />
+
+    </aside>
+</body>
+</html>

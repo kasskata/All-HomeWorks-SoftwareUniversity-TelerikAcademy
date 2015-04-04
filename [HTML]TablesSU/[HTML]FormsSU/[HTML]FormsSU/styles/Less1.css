@@ -1,0 +1,8 @@
+body table {
+  border: 1px solid black;
+}
+body table tr td {
+  border: 1px solid black;
+  font-size: 60px;
+  padding: 10px;
+}

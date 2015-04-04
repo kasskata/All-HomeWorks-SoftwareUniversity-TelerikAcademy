@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>03.TheBiggerFromThree</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a script that finds the biggest of three integers using nested if statements.
+    </p>
+    <input type="number" placeholder="Number:" id="first" />
+    <input type="number" placeholder="Number:" id="second" />
+    <input type="number" placeholder="Number:" id="thirth" />
+    
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            var a = jsConsole.readInteger("#first");
+            var b = jsConsole.readInteger("#second");
+            var c = jsConsole.readInteger("#thirth");
+
+            if (a > b && a > c) {
+                jsConsole.writeLine("Bigger is "+ a);
+            }
+            else if (b > a && b > c) {
+                jsConsole.writeLine("Bigger is "+ b);
+            }
+            else {
+                jsConsole.writeLine("Biugger is "+ c);
+            }
+            //Or
+            if (a > b)
+            {
+                if (a > c)
+                {
+                    jsConsole.writeLine("Bigger is " + a);
+                }
+            }
+            else if (b > a) {
+                if (b > c) {
+                    jsConsole.writeLine("Bigger is " + b);
+                }
+            }
+            else
+            {
+                jsConsole.writeLine("Bigger is " + a);
+            }
+
+        }
+    </script>
+</body>
+</html>

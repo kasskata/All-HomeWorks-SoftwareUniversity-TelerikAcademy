@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>OddOrEven</title>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write an expression that checks if given integer is odd or even.
+    </p>
+    <p>When ready just type "Enter"</p>
+    <input type="number" value="Number:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js">
+    </script>
+    <script>
+        function BtnClicked() {
+            var input = jsConsole.readInteger("input");
+            var value = input;
+
+            if (value % 2 == 0)
+            {
+                jsConsole.writeLine(" It's Even");
+            }
+            else
+            {
+                jsConsole.writeLine(" It's Odd");
+            }
+        }
+    </script>
+</body>
+</html>

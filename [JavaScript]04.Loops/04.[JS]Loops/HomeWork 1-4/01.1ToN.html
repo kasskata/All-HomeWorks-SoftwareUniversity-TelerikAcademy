@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>01.1ToN</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a script that prints all the numbers from 1 to N
+    </p>
+    <input type="number" placeholder="Number:" onchange="BtnClicked()" id="input" />
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked()
+        {
+            //dont try with big numbers !
+            var number = jsConsole.readInteger("#input");
+
+            for (var i = 1; i <= number; i++)
+            {
+                if (i != number) {
+                    jsConsole.write(i + ", ");
+                }
+                else if (i = number)
+                {
+                    jsConsole.write(i);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

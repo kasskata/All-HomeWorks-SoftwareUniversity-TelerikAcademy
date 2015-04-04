@@ -1,0 +1,18 @@
+body a {
+  color: black;
+  text-decoration: none; }
+body nav {
+  font-size: 1.2em; }
+  body nav ul {
+    display: inline-block;
+    list-style-type: none;
+    position: relative; }
+    body nav ul li ul {
+      display: none; }
+    body nav ul li:hover a {
+      text-decoration: underline; }
+    body nav ul li:hover ul {
+      color: grey;
+      display: block;
+      left: -30px; }
+

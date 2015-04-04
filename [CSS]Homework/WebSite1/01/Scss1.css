@@ -1,0 +1,103 @@
+body {
+  background-image: url(http://localhost:32837/01/images/gradientBackground.png); }
+  body #reg-form-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 40px;
+    margin-right: 100px;
+    color: white; }
+    body #reg-form-container input, body #reg-form-container button {
+      border: 0.1em solid black;
+      border-radius: 9px;
+      padding: 10px;
+      color: white;
+      border-color: #603382;
+      background-color: #B35EF3;
+      margin: 5px;
+      height: 22px;
+      padding: 0;
+      text-decoration: center; }
+    body #reg-form-container button {
+      width: 100px; }
+  body nav ul {
+    border: 0.1em solid black;
+    border-radius: 9px;
+    padding: 10px;
+    color: white;
+    width: 74%;
+    height: 29px; }
+    body nav ul li {
+      list-style-type: none;
+      display: inline-block;
+      position: relative;
+      padding: 4px; }
+      body nav ul li ul {
+        display: none; }
+      body nav ul li a {
+        color: white;
+        text-decoration: none; }
+      body nav ul li:hover ul {
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 0px;
+        border: 0.1em solid black;
+        border-radius: 9px;
+        padding: 10px;
+        color: white;
+        width: 200px;
+        height: auto;
+        background-color: #BD76F3; }
+        body nav ul li:hover ul li {
+          border: 0.1em solid black;
+          border-radius: 9px;
+          padding: 10px;
+          color: white;
+          display: block; }
+  body article {
+    border: 0.1em solid black;
+    border-radius: 9px;
+    padding: 10px;
+    color: white;
+    margin: 15px;
+    overflow: auto;
+    width: 70%; }
+    body article a {
+      color: lightgrey;
+      font-style: italic;
+      text-decoration: none; }
+    body article footer {
+      text-align: right; }
+  body aside {
+    overflow: auto;
+    width: 30%;
+    position: absolute;
+    right: 0px;
+    top: 205px; }
+    body aside ul li {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 25px;
+      margin-left: 20px;
+      border: 0.1em solid black;
+      border-radius: 9px;
+      padding: 10px;
+      color: white;
+      border-radius: 0;
+      list-style-type: none; }
+      body aside ul li a {
+        color: lightgrey;
+        font-style: italic;
+        text-decoration: none; }
+      body aside ul li ul li {
+        border: none;
+        position: relative;
+        left: -30px;
+        margin: 0px; }
+        body aside ul li ul li:before {
+          content: url(http://localhost:32837/01/images/li-dot.png); }
+  body footer {
+    text-align: center;
+    color: white; }
+

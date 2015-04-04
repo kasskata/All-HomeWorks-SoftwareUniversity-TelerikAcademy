@@ -1,0 +1,17 @@
+﻿table{
+   background-color:grey;
+   border-spacing:1px;
+}
+th{
+    background-color:lawngreen;
+    width:23%;
+}
+img{
+    height:14px;
+}
+.NonDevided{
+    background-color:white;
+}
+.Devided{
+    background-color:lightgray;
+}

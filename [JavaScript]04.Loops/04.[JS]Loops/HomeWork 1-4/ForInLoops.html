@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://telerikacademy.com/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>ForInLoops.</title>
+    <link href="../JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        Write a script that finds the lexicographically smallest and largest property in document, window and navigator objects
+    </p>
+    <button id="Btn" onclick="BtnClicked()">Check</button>
+    <div id="js-console">
+    </div>
+    <script src="../JSConsole/js-console.js"></script>
+    <script>
+        function BtnClicked() {
+            findSmallest(window);
+            findBiggest(window);
+            findSmallest(navigator);
+            findBiggest(navigator);
+            findSmallest(document);
+            findBiggest(document);
+
+            function findSmallest(object) {
+                var smallest = 'zzz';
+                for (var property in object) {
+                    if (property < smallest) {
+                        smallest = property;
+                    }
+                }
+                jsConsole.writeLine(object + ": smallest is " + smallest);
+            }
+            function findBiggest(object) {
+                var biggest = 'aaa';
+                for (var property in object) {
+                    if (property > biggest) {
+                        biggest = property;
+                    }
+                }
+                jsConsole.writeLine(object + ": smallest is " + biggest);
+
+            }
+        }
+    </script>
+</body>
+</html>

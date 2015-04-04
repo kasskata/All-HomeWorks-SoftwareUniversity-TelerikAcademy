@@ -1,0 +1,39 @@
+body
+{
+background-color:beige;
+	img{
+	width:200px;
+	height:150px;
+	}
+	section{
+	width:530px;
+	border:1px solid black;
+	padding:10px;
+	margin:30px;
+	margin-left:0px;
+	overflow:auto;
+	font-size:1.2em;
+	background-color:white;
+		img{
+		float:left;
+		}
+		input{
+		margin-right:5px;
+		width:100px;
+		height:27px;
+		display:inline-block;
+		float:right;
+		position:relative;
+		top:78px;
+		&.Add{
+		background-image:url(http://localhost:25633/02.PNGImagesWithText/ButtonAdd.png);
+		background-position:100%;
+		width:80px;
+
+		}
+		background-image:url(http://localhost:25633/02.PNGImagesWithText/Buttons.png);
+		background-position:100%;
+		border-color:rgb(132, 132, 255);
+		}	
+	}
+}

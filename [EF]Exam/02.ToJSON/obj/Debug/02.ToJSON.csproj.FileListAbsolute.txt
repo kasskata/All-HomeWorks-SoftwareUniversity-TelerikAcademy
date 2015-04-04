@@ -1,0 +1,14 @@
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\bin\Debug\02.ToJSON.exe.config
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\bin\Debug\02.ToJSON.exe
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\bin\Debug\02.ToJSON.pdb
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\bin\Debug\EntityFramework.dll
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\bin\Debug\EntityFramework.SqlServer.dll
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\bin\Debug\FootballDb.dll
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\bin\Debug\Newtonsoft.Json.dll
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\bin\Debug\FootballDb.pdb
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\bin\Debug\EntityFramework.xml
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\bin\Debug\EntityFramework.SqlServer.xml
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\bin\Debug\Newtonsoft.Json.xml
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\obj\Debug\02.ToJSON.csprojResolveAssemblyReference.cache
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\obj\Debug\02.ToJSON.exe
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\02.ToJSON\obj\Debug\02.ToJSON.pdb

@@ -1,0 +1,1 @@
+D:\SoftwareUniversity\HomeWork-SoftUni-Telerik.git\trunk\[EF]Exam\07.PhonebookToJSON\bin\Debug\07.PhonebookToJSON.exe.config

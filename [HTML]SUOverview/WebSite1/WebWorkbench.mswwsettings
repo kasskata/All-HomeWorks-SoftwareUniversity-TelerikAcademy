@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<web-workbench>
+  <file name="Less.less">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">True</setting>
+    <setting name="OutputFolder" />
+  </file>
+</web-workbench>
