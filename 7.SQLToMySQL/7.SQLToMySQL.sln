@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQLToMySQL", "MSSQLToMySQL\MSSQLToMySQL.csproj", "{A5F78AEB-4F00-41DD-9060-04CC72B09B81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupermarketsDbContext", "SupermarketsDbContext\SupermarketsDbContext.csproj", "{E54AACF1-BF73-40AA-BA17-60B04E4BD51B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supermakets.Data", "Supermakets.Data\Supermakets.Data.csproj", "{495AE24D-178D-402E-8A32-7970427320DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5F78AEB-4F00-41DD-9060-04CC72B09B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F78AEB-4F00-41DD-9060-04CC72B09B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F78AEB-4F00-41DD-9060-04CC72B09B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F78AEB-4F00-41DD-9060-04CC72B09B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E54AACF1-BF73-40AA-BA17-60B04E4BD51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E54AACF1-BF73-40AA-BA17-60B04E4BD51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E54AACF1-BF73-40AA-BA17-60B04E4BD51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E54AACF1-BF73-40AA-BA17-60B04E4BD51B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{495AE24D-178D-402E-8A32-7970427320DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495AE24D-178D-402E-8A32-7970427320DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495AE24D-178D-402E-8A32-7970427320DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{495AE24D-178D-402E-8A32-7970427320DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
