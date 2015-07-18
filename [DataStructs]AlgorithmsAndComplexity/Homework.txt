@@ -1,0 +1,116 @@
+Problem 1.      Add(T) Complexity -> Worst Case :
+ 
+        public void Add(T item) {
+        var newArr = new T[this.arr.Length + 1];                // O(1)
+        Array.Copy(this.arr, newArr, this.arr.Length);          // O(n)
+        newArr[newArr.Length - 1] = item;                       // O(1)
+        this.arr = newArr;                                      // O(1)
+    }
+ 
+        T(n) = O(n)
+ 
+-------------------------------------------------------------------
+ 
+Problem 2.      Remove(index) Complexity –> Worst Case :
+ 
+        public T Remove(int index) {
+        T result = this.arr[index];                                                             O(1)
+        var newArr = new T[this.arr.Length - 1];                                                O(1)
+        Array.Copy(this.arr, newArr, index);         O(n)                                       O(n)
+        Array.Copy(this.arr, index + 1, newArr, index, this.arr.Length - index - 1);            O(n)
+        this.arr = newArr;                                                                      O(1)
+        return result;                                                                          O(1)
+    }
+ 
+        T(n) = O(n)
+ 
+-------------------------------------------------------------------
+ 
+Problem 3.      Remove(index) Complexity –> Best Case :
+ 
+        public T Remove(int index) {
+        T result = this.arr[index];                                                           O(1)
+        var newArr = new T[this.arr.Length - 1];                                              O(1)
+        Array.Copy(this.arr, newArr, index);                                                  O(1)
+        Array.Copy(this.arr, index + 1, newArr, index, this.arr.Length - index - 1);          O(n)
+        this.arr = newArr;                                                                    O(1)
+        return result;                                                                        O(1)
+    }
+ 
+        T(n) = O(n)
+ 
+-------------------------------------------------------------------
+ 
+Problem 4.      Remove(index) Complexity – Average Case :
+ 
+        public T Remove(int index) {
+        T result = this.arr[index];                                                        O(1)
+        var newArr = new T[this.arr.Length - 1];                                           O(1)
+        Array.Copy(this.arr, newArr, index);                                               O(1)
+        Array.Copy(this.arr, index + 1, newArr, index, this.arr.Length - index - 1);       O(n)
+        this.arr = newArr;                                                                 O(1)
+        return result;                                                                     O(1)
+    }
+ 
+        T(n) = O(n)
+	
+ 
+-------------------------------------------------------------------
+ 
+Problem 5.      RemoveFirst(T) Complexity :
+ 
+        public T RemoveFirst() {
+        return this.Remove(0);          O(n)
+    }
+ 
+        T(n) = O(n)
+ 
+-------------------------------------------------------------------
+ 
+Problem 6.      RemoveLast(T) Complexity :
+ 
+        public T RemoveLast() {
+        return this.Remove(this.Length - 1);    O(n)
+    }
+ 
+        T(n) = O(n)
+ 
+-------------------------------------------------------------------
+ 
+Problem 7.      Length Complexity :
+ 
+        public int Length {
+        get { return this.arr.Length; }         O(1)
+    }
+ 
+        T(n) = O(1)
+ 
+-------------------------------------------------------------------
+ 
+Problem 8.      This[index] Complexity :
+ 
+        public T this[int index] {
+        get { return this.arr[index]; }         O(1)
+    }
+ 
+        T(n) = O(1)
+ 
+-------------------------------------------------------------------
+ 
+Problem 9.      First Complexity :
+ 
+        public T First {
+        get { return this.arr[0]; }             O(1)
+    }
+ 
+        T(n) = O(1)
+ 
+-------------------------------------------------------------------
+ 
+Problem 10.     Last Complexity :
+ 
+public T Last {
+        get { return this.arr[this.arr.Length - 1]; }   O(1)
+}
+ 
+T(n) = O(1)
